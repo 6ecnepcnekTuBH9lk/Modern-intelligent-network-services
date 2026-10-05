@@ -1,5 +1,3 @@
-"""Бизнес-валидация, постпроцессинг и работа с прогнозами."""
-
 import logging
 import uuid
 
@@ -54,18 +52,28 @@ def create_prediction(request: FarmRequest) -> PredictionResponse:
     predictions[result.request_id] = result
     logger.info(
         "Prediction completed | request_id=%s | farm_id=%s | model_version=%s | risk_score=%s | risk_level=%s",
-        result.request_id, result.farm_id, MODEL_VERSION, score, level,
+        result.request_id,
+        result.farm_id,
+        MODEL_VERSION,
+        score,
+        level,
     )
     return result
 
 
 def find_prediction(request_id: str) -> PredictionResponse:
     if request_id not in predictions:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Prediction not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Prediction not found",
+        )
     return predictions[request_id]
 
 
-def list_predictions(limit: int = 10, risk_level: str | None = None) -> list[PredictionResponse]:
+def list_predictions(
+    limit: int = 10,
+    risk_level: str | None = None,
+) -> list[PredictionResponse]:
     values = list(predictions.values())
     if risk_level is not None:
         if risk_level not in ALLOWED_RISK_LEVELS:
