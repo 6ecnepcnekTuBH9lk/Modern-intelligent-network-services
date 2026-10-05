@@ -1,5 +1,3 @@
-"""Учебный алгоритм агроскоринга из реализации преподавателя."""
-
 from schemas import FarmRequest
 
 MODEL_NAME = "agro-risk-model"
@@ -8,7 +6,6 @@ MODEL_TYPE = "risk-scoring"
 
 
 def calculate_risk(data: FarmRequest) -> float:
-    """Рассчитывает риск по финансовым показателям и количеству осадков."""
     score = 0.1
     if data.payment_delay_days > 30:
         score += 0.3
