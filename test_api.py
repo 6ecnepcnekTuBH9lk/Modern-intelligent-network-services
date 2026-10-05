@@ -1,5 +1,3 @@
-"""Интеграционные тесты через настоящий uvicorn и HTTP (без TestClient)."""
-
 import json
 import os
 from pathlib import Path
@@ -52,13 +50,17 @@ def running_server(ready=True):
         command = [sys.executable, "-m", "uvicorn", "main:app", "--host", "127.0.0.1", "--port", str(port)]
     else:
         command = [
-            sys.executable, "-c",
+            sys.executable,
+            "-c",
             "import main, uvicorn; main.MODEL_READY = False; "
             f"uvicorn.run(main.app, host='127.0.0.1', port={port})",
         ]
     with tempfile.TemporaryFile() as log:
         process = subprocess.Popen(
-            command, cwd=ROOT, stdout=log, stderr=log,
+            command,
+            cwd=ROOT,
+            stdout=log,
+            stderr=log,
             env={**os.environ, "PYTHONIOENCODING": "utf-8"},
             creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
         )
@@ -92,9 +94,16 @@ class APITests(unittest.TestCase):
         cls.url = cls.server.__enter__()
         cls.addClassCleanup(cls.server.__exit__, None, None, None)
         cls.samples = []
-        for payload in [FARM, {**FARM, "payment_delay_days": 45}, {
-            **FARM, "payment_delay_days": 45, "previous_defaults": 1, "debt": 6500000,
-        }]:
+        for payload in [
+            FARM,
+            {**FARM, "payment_delay_days": 45},
+            {
+                **FARM,
+                "payment_delay_days": 45,
+                "previous_defaults": 1,
+                "debt": 6500000,
+            },
+        ]:
             code, body, _ = request(cls.url, "/predict", payload)
             if code != 200:
                 raise AssertionError(body)
@@ -110,25 +119,43 @@ class APITests(unittest.TestCase):
         self.assertEqual(self.check("/health", 200), {"status": "ok"})
 
     def test_02_model_info_200(self):
-        self.assertEqual(self.check("/model-info", 200), {
-            "model_name": "agro-risk-model", "model_version": "1.0",
-            "model_type": "risk-scoring", "status": "ready",
-        })
+        self.assertEqual(
+            self.check("/model-info", 200),
+            {
+                "model_name": "agro-risk-model",
+                "model_version": "1.0",
+                "model_type": "risk-scoring",
+                "status": "ready",
+            },
+        )
 
     def test_03_predict_200_and_risk_profiles(self):
         for sample, score, level, recommendation in zip(
-            self.samples, [0.1, 0.4, 0.9], ["low", "medium", "high"],
-            ["Стандартное рассмотрение", "Требуется дополнительная проверка",
-             "Высокий риск. Требуется ручное рассмотрение"],
+            self.samples,
+            [0.1, 0.4, 0.9],
+            ["low", "medium", "high"],
+            [
+                "Стандартное рассмотрение",
+                "Требуется дополнительная проверка",
+                "Высокий риск. Требуется ручное рассмотрение",
+            ],
         ):
             with self.subTest(level=level):
                 self.assertEqual(sample["risk_score"], score)
                 self.assertEqual(sample["risk_level"], level)
                 self.assertEqual(sample["recommendation"], recommendation)
                 self.assertEqual(UUID(sample["request_id"]).version, 4)
-                self.assertEqual(set(sample), {
-                    "request_id", "farm_id", "risk_score", "risk_level", "recommendation", "model_version",
-                })
+                self.assertEqual(
+                    set(sample),
+                    {
+                        "request_id",
+                        "farm_id",
+                        "risk_score",
+                        "risk_level",
+                        "recommendation",
+                        "model_version",
+                    },
+                )
         result = self.check("/predict", 200, FARM)
         self.assertNotIn(result["request_id"], [sample["request_id"] for sample in self.samples])
 
@@ -138,14 +165,20 @@ class APITests(unittest.TestCase):
 
     def test_05_unknown_region_400(self):
         body = self.check("/predict", 400, {**FARM, "region": "Unknown"})
-        self.assertEqual(body["detail"], "Unknown region: Unknown. Allowed regions: ['Krasnodar', 'Rostov', 'Stavropol']")
+        self.assertEqual(
+            body["detail"],
+            "Unknown region: Unknown. Allowed regions: ['Krasnodar', 'Rostov', 'Stavropol']",
+        )
 
     def test_06_existing_prediction_200(self):
         sample = self.samples[2]
         self.assertEqual(self.check("/predictions/" + sample["request_id"], 200), sample)
 
     def test_07_unknown_prediction_404(self):
-        self.assertEqual(self.check("/predictions/not-found", 404), {"detail": "Prediction not found"})
+        self.assertEqual(
+            self.check("/predictions/not-found", 404),
+            {"detail": "Prediction not found"},
+        )
 
     def test_08_limit_two_200(self):
         self.assertEqual(self.check("/predictions?limit=2", 200), self.samples[:2])
@@ -161,9 +194,16 @@ class APITests(unittest.TestCase):
 
     def test_12_openapi_contract_200(self):
         api = self.check("/openapi.json", 200)
-        self.assertEqual(set(api["paths"]), {
-            "/health", "/model-info", "/predict", "/predictions", "/predictions/{request_id}",
-        })
+        self.assertEqual(
+            set(api["paths"]),
+            {
+                "/health",
+                "/model-info",
+                "/predict",
+                "/predictions",
+                "/predictions/{request_id}",
+            },
+        )
         self.assertEqual(set(api["components"]["schemas"]["FarmRequest"]["required"]), set(FARM))
         expected_codes = {
             ("/predict", "post"): {"200", "400", "422", "503"},
@@ -185,15 +225,26 @@ class APITests(unittest.TestCase):
                 self.check(f"/predictions?limit={limit}", 422)
         self.assertEqual(len(self.check("/predictions?limit=1", 200)), 1)
         self.check("/predictions?limit=100", 200)
-        self.assertEqual(self.check("/predictions?risk_level=medium&limit=5", 200), [self.samples[1]])
+        self.assertEqual(
+            self.check("/predictions?risk_level=medium&limit=5", 200),
+            [self.samples[1]],
+        )
 
     def test_14_structural_validation_no_storage_mutation(self):
         before = self.check("/predictions?limit=100", 200)
         for field, value in [
-            ("area_ha", 0), ("precipitation_mm", -1), ("payment_delay_days", -1),
-            ("previous_defaults", -1), ("debt", -1), ("temperature_avg", -61),
-            ("temperature_avg", 61), ("farm_id", ""), ("region", ""),
-            ("crop_type", ""), ("area_ha", "not-a-number"), ("previous_defaults", 1.5),
+            ("area_ha", 0),
+            ("precipitation_mm", -1),
+            ("payment_delay_days", -1),
+            ("previous_defaults", -1),
+            ("debt", -1),
+            ("temperature_avg", -61),
+            ("temperature_avg", 61),
+            ("farm_id", ""),
+            ("region", ""),
+            ("crop_type", ""),
+            ("area_ha", "not-a-number"),
+            ("previous_defaults", 1.5),
         ]:
             with self.subTest(field=field, value=value):
                 self.check("/predict", 422, {**FARM, field: value})
@@ -210,7 +261,16 @@ class APITests(unittest.TestCase):
             ({"debt": 5000001}, 0.3, "medium"),
             ({"precipitation_mm": 99}, 0.2, "low"),
             ({"payment_delay_days": 31, "previous_defaults": 1}, 0.7, "high"),
-            ({"payment_delay_days": 31, "previous_defaults": 1, "debt": 5000001, "precipitation_mm": 99}, 1.0, "high"),
+            (
+                {
+                    "payment_delay_days": 31,
+                    "previous_defaults": 1,
+                    "debt": 5000001,
+                    "precipitation_mm": 99,
+                },
+                1.0,
+                "high",
+            ),
         ]
         for changes, score, level in cases:
             with self.subTest(changes=changes):
