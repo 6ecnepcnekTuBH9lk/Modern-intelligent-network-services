@@ -1,5 +1,3 @@
-"""REST API агроскоринга: лабораторная работа № 1."""
-
 import logging
 import time
 
@@ -21,13 +19,11 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Как в примере преподавателя: False отключает инференс с HTTP 503.
 MODEL_READY = True
 
 
 @app.middleware("http")
 async def add_process_time(request: Request, call_next):
-    """Измеряет длительность запроса и добавляет X-Process-Time в секундах."""
     start_time = time.perf_counter()
     try:
         response = await call_next(request)
@@ -38,7 +34,10 @@ async def add_process_time(request: Request, call_next):
     response.headers["X-Process-Time"] = str(round(process_time, 6))
     logger.info(
         "HTTP request | method=%s | path=%s | status=%s | duration=%.6f",
-        request.method, request.url.path, response.status_code, process_time,
+        request.method,
+        request.url.path,
+        response.status_code,
+        process_time,
     )
     return response
 
@@ -83,7 +82,6 @@ def model_info():
     },
 )
 def predict(request: FarmRequest):
-    # Проверка готовности предшествует бизнес-валидации, как у преподавателя.
     if not MODEL_READY:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -103,8 +101,16 @@ def predict(request: FarmRequest):
     responses={400: {"description": "Недопустимая категория риска"}},
 )
 def get_predictions(
-    limit: int = Query(default=10, ge=1, le=100, description="Максимальное количество результатов"),
-    risk_level: str | None = Query(default=None, description="Фильтр по категории риска: low, medium или high"),
+    limit: int = Query(
+        default=10,
+        ge=1,
+        le=100,
+        description="Максимальное количество результатов",
+    ),
+    risk_level: str | None = Query(
+        default=None,
+        description="Фильтр по категории риска: low, medium или high",
+    ),
 ):
     return list_predictions(limit, risk_level)
 
