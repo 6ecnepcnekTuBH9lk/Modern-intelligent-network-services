@@ -1,11 +1,7 @@
-"""Контракты входных данных и ответов API."""
-
 from pydantic import BaseModel, Field
 
 
 class FarmRequest(BaseModel):
-    """Данные хозяйства, передаваемые клиентом в POST /predict."""
-
     farm_id: str = Field(..., min_length=1, description="Идентификатор хозяйства")
     region: str = Field(..., min_length=1, description="Регион хозяйства")
     crop_type: str = Field(..., min_length=1, description="Основная сельскохозяйственная культура")
@@ -18,8 +14,6 @@ class FarmRequest(BaseModel):
 
 
 class PredictionResponse(BaseModel):
-    """Сохраненный результат оценки риска."""
-
     request_id: str
     farm_id: str
     risk_score: float
