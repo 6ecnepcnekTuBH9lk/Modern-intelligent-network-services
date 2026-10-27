@@ -5,3 +5,11 @@ __pycache__/
 *.pyo
 *.pyd
 .pytest_cache/
+_reference/
+
+lab2/.venv/
+lab2/agro_scoring.db
+lab2/agro_scoring.db-shm
+lab2/agro_scoring.db-wal
+
+lab2/checks/
