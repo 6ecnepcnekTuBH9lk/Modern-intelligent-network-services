@@ -199,7 +199,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return await request.app.state.service.predict_with_llm(data, request.state.request_id, request.app.state.llm)
 
     @app.post("/demo/seed-weekdays", response_model=SeedResponse, summary="Данные для проверки пагинации",
-              description="Создаёт демонстрационные прогнозы за последние 21 день, как в примере преподавателя.",
+              description="Создаёт демонстрационные прогнозы за последние 21 день для проверки пагинации.",
               responses=errors(422, 503))
     async def seed_demo_weekdays(request: Request, count: int = Query(default=70, ge=7, le=1000)):
         return await request.app.state.service.seed_weekdays(count)
