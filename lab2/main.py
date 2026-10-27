@@ -131,7 +131,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return await request.app.state.service.predict(data, request.state.request_id)
 
     @app.post("/batch-predict", response_model=BatchPredictionResponse, summary="Явный пакетный инференс",
-              description="Один вызов модели для 1–8 хозяйств; одна транзакция SQLite для всего пакета.",
+              description="Один вызов модели для 1-8 хозяйств; одна транзакция SQLite для всего пакета.",
               responses=errors(400, 422, 503, 504))
     async def batch_predict(batch: BatchRequest, request: Request):
         return await request.app.state.service.predict_batch(batch.items, request.state.request_id)
