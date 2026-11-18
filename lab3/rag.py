@@ -19,8 +19,24 @@ from pypdf import PdfReader
 
 HERE = Path(__file__).resolve().parent
 REFERENCE = HERE.parent / "_reference"
-PDF = next(REFERENCE.rglob("LLM instruct (2).pdf"))
-SOURCE_NB = PDF.with_name("SimpleLangchainRag.ipynb")
+SOURCE_DIR = HERE / "sources"
+
+
+def resolve_source(filename):
+    local = SOURCE_DIR / filename
+    if local.is_file():
+        return local
+    if REFERENCE.is_dir():
+        candidate = next((path for path in REFERENCE.rglob(filename) if path.is_file()), None)
+        if candidate is not None:
+            return candidate
+    raise FileNotFoundError(
+        f"Missing source file: {filename}. Place it in lab3/sources/ (see lab3/README.md)."
+    )
+
+
+PDF = resolve_source("LLM instruct (2).pdf")
+SOURCE_NB = resolve_source("SimpleLangchainRag.ipynb")
 URL = "http://127.0.0.1:11434"
 LLM_MODEL = "llama3.2:1b"
 EMBED_MODEL = "embeddinggemma"
