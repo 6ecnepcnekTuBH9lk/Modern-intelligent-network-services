@@ -12,7 +12,7 @@
         "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
       }
     ],
-    "hit_at_3": true,
+    "hit_at_3": false,
     "hit_annotated_passage": false,
     "fragments": [
       {
@@ -62,7 +62,7 @@
     "answer": null,
     "score_0_2": null,
     "answer_without_evidence": null,
-    "review_note": "На стр. 42 явно указан набор демонстраций для supervised fine-tuning. Это достаточный альтернативный отрывок.",
+    "review_note": "Фрагмент стр. 42 сообщает о demonstration dataset, но не раскрывает источник и содержание примеров полностью. Для эталонного ответа не хватает данных в одном фрагменте.",
     "method": "BoW",
     "kind": "exact"
   },
