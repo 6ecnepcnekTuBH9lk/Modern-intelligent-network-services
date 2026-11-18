@@ -1,5 +1,5 @@
 ﻿method,kind,questions,hits,hit_rate_at_3_pct,mean_score,assessed
-BoW,exact,5,5,100.0,,0
+BoW,exact,5,4,80.0,,0
 BoW,paraphrase,5,0,0.0,,0
 OllamaEmbeddings,exact,5,1,20.0,,0
 OllamaEmbeddings,paraphrase,5,0,0.0,,0
