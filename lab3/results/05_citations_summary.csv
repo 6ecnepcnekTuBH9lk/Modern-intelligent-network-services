@@ -1,0 +1,8 @@
+﻿id,format_link_found,citation,exists,page_correct,supports_claim
+Q02,True,"[Фрагмент 187, стр. 45]",True,True,False
+Q05,False,,,,
+Q06,False,,,,
+Q09,True,"[Фрагмент 187, стр. 45]",True,True,False
+Q09,True,"[Фрагмент 246, стр. 68]",True,True,False
+Q09,True,"[Фрагмент 240, стр. 66]",True,True,False
+Q10,True,"[Фрагмент 196, стр. 50]",True,True,True

@@ -1,0 +1,22 @@
+{
+  "pdf": "LLM instruct (2).pdf",
+  "pdf_pages": 68,
+  "nonempty_pages": 68,
+  "extracted_characters": 181761,
+  "first_page": {
+    "source_name": "LLM instruct (2).pdf",
+    "page_number": 1,
+    "pdf_label": "1",
+    "printed_page": null
+  },
+  "first_chunk": {
+    "source_name": "LLM instruct (2).pdf",
+    "page_number": 1,
+    "pdf_label": "1",
+    "printed_page": null,
+    "start_index": 0,
+    "chunk_id": 1,
+    "index_config": "1000/200"
+  },
+  "base_chunks": 246
+}

@@ -1,0 +1,8 @@
+{
+  "isolated": true,
+  "window": 3,
+  "eviction": true,
+  "clear": true,
+  "clear_preserves_other_session": true,
+  "fourth_turn_query": "What is the Google DeepMind's InstructGPT model?"
+}

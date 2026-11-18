@@ -1,0 +1,10 @@
+﻿session,turn,question,query,history_used,raw_query_hit,hit_at_3,top3_ids,score_0_2,rewrite_ok
+instruct,1,What is InstructGPT and how was it produced?,What is InstructGPT and how was it produced?,0,False,False,"[187, 246, 240]",0,
+training,1,What is PPO-ptx in InstructGPT training?,What is PPO-ptx in InstructGPT training?,0,False,False,"[187, 246, 29]",0,
+summaries,1,What metric was used to evaluate TL;DR generated summaries?,What metric was used to evaluate TL;DR generated summaries?,0,False,False,"[187, 168, 246]",0,
+instruct,2,Which size beat the 175B baseline?,What is the size of the model that beat the 175B baseline?,1,False,False,"[187, 171, 75]",0,False
+training,2,What do its two coefficients control?,What are the coefficients that control the performance of PPO-ptx in InstructGPT training?,1,False,False,"[187, 198, 211]",0,False
+summaries,2,How many posts did that benchmark contain?,What is the number of posts in the benchmark mentioned in the recent dialogue?,1,False,False,"[187, 246, 240]",0,False
+instruct,3,What examples were used for its initial supervised stage?,What examples were used in InstructGPT's initial supervised stage?,2,False,False,"[187, 246, 240]",0,True
+training,3,On which two benchmarks did it reverse regressions?,What are the two benchmarks on which PPO-ptx reversed regressions?,2,False,False,"[187, 198, 246]",0,True
+summaries,3,What was that score compared against?,What was the score compared to?,2,False,False,"[187, 246, 45]",0,False

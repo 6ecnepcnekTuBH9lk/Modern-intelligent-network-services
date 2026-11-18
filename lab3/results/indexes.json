@@ -1,0 +1,38 @@
+{
+  "full-1000-200": {
+    "chunks": 246,
+    "created": true
+  },
+  "first-5": {
+    "chunks": 5,
+    "created": true
+  },
+  "full-500-10": {
+    "chunks": 419,
+    "created": true
+  },
+  "full-1000-10": {
+    "chunks": 217,
+    "created": true
+  },
+  "full-2000-10": {
+    "chunks": 127,
+    "created": true
+  },
+  "full-500-100": {
+    "chunks": 476,
+    "created": true
+  },
+  "full-1000-100": {
+    "chunks": 228,
+    "created": true
+  },
+  "full-2000-100": {
+    "chunks": 128,
+    "created": true
+  },
+  "full-1000-0": {
+    "chunks": 217,
+    "created": true
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "e1/first_5/Q01": {
+    "fingerprint": "1e4abe23c1f699f967ae938e1bdee313f97c991979a2f5d2cb692f792bf050b1",
+    "score": 0,
+    "note": "Отказ при достаточном фрагменте; ошибка генерации."
+  },
+  "e1/first_5/Q02": {
+    "fingerprint": "72d8f7b838ab9f9376c7aabd84a92349dea66fd28da8b412a400154f6b201171",
+    "score": 0,
+    "note": "Отказ при достаточном фрагменте; ошибка генерации."
+  },
+  "e1/first_5/Q03": {
+    "fingerprint": "85c244bf357cd5865069ba2a6038d0ad58cb0a7a63eede1a164e537d382462d7",
+    "score": 0,
+    "note": "Отказ при достаточном фрагменте; ошибка генерации."
+  },
+  "e1/first_5/Q05": {
+    "fingerprint": "a8a63212b34a74cb4a2ad2febaf96492633df80f175b91bfd0479d1214926641",
+    "score": 0,
+    "note": "Доказательство отсутствует в сокращённом индексе; отказ по контексту обоснован."
+  },
+  "e1/first_5/Q09": {
+    "fingerprint": "8d47e9fb9229b1c91a1d504de83e99aac7755e1ea15d4be80c9722268ee54790",
+    "score": 0,
+    "note": "Доказательство отсутствует в сокращённом индексе; отказ по контексту обоснован."
+  },
+  "e1/first_5/Q10": {
+    "fingerprint": "8d47e9fb9229b1c91a1d504de83e99aac7755e1ea15d4be80c9722268ee54790",
+    "score": 0,
+    "note": "Доказательство отсутствует в сокращённом индексе; отказ по контексту обоснован."
+  },
+  "e1/full/Q01": {
+    "fingerprint": "6438406d922e60ac7b5c4bf6658af8cd9cce8e37b852fb7d9551f2674d93fff9",
+    "score": 0,
+    "note": "Выдача не содержит достаточного доказательства; отказ по контексту обоснован."
+  },
+  "e1/full/Q02": {
+    "fingerprint": "8966e19031293832dc29aa2416ff57f949a5bc8ed5f1b4a312464b56be64e9ba",
+    "score": 0,
+    "note": "Выдача не содержит достаточного доказательства; отказ по контексту обоснован."
+  },
+  "e1/full/Q03": {
+    "fingerprint": "cc7ad325f120b1d150564118a7c7f82d8f08ad8450f81cb01907cd75637fe6c3",
+    "score": 0,
+    "note": "Выдача не содержит достаточного доказательства; отказ по контексту обоснован."
+  },
+  "e1/full/Q05": {
+    "fingerprint": "1ecef690954e65d86d505640aef596247659a589b2b3ac36de16fff5e3afb4cc",
+    "score": 0,
+    "note": "Выдача не содержит достаточного доказательства; отказ по контексту обоснован."
+  },
+  "e1/full/Q09": {
+    "fingerprint": "9507262a8508df6736e0c4558d1286899f5242dcd818f52b06d7e90eff37059a",
+    "score": 0,
+    "note": "Выдача не содержит достаточного доказательства; отказ по контексту обоснован."
+  },
+  "e1/full/Q10": {
+    "fingerprint": "6e75ffa0a7fb3bfe657dfd0391d95f966233a2f057a31c591d5adb7b1ff0e58f",
+    "score": 0,
+    "note": "Отказ при достаточном фрагменте; ошибка генерации."
+  },
+  "base/D01": {
+    "fingerprint": "d53f7f51aef0a31c5f9e4bf677bb47e2e9adbe09bb9d80d1749d56854f5a63b7",
+    "score": 0,
+    "note": "Нужное описание не извлечено. Ответ добавляет утверждение, которого нет в контексте."
+  },
+  "e4/BoW/exact/Q01": {
+    "fingerprint": "61b8a409ab37d89b76e5078921f84445262dbd79f38821589ab150d6cbd93138",
+    "note": "На стр. 42 явно указан набор демонстраций для supervised fine-tuning. Это достаточный альтернативный отрывок.",
+    "hit_at_3": true
+  },
+  "e5/Q02": {
+    "fingerprint": "deef8f99b5c3fbcd34f918dc8633b0c684d610bf0c5cab212711f4277f9c63d4",
+    "note": "Ссылка ведёт на подпись об измерении токсичности; размер модели не указан.",
+    "score": 0,
+    "citation_support": [
+      false
+    ]
+  },
+  "e5/Q05": {
+    "fingerprint": "8966e19031293832dc29aa2416ff57f949a5bc8ed5f1b4a312464b56be64e9ba",
+    "note": "Модель отказалась; ссылок нет.",
+    "score": 0,
+    "citation_support": []
+  },
+  "e5/Q06": {
+    "fingerprint": "7cac2664f8472eb29d2a25093bb013a3784d5be42955965f9a26202478f02146",
+    "note": "Утверждение о параметрах не подтверждено; ссылка не соответствует формату.",
+    "score": 0,
+    "citation_support": []
+  },
+  "e5/Q09": {
+    "fingerprint": "0dbb22c7ab044fd37cfd183b8f87c54134ee238a63c7ea7615b6a3729b5bbe32",
+    "note": "Эхо контекста: ни одна из трёх ссылок не подтверждает долю английских данных.",
+    "score": 0,
+    "citation_support": [
+      false,
+      false,
+      false
+    ]
+  },
+  "e5/Q10": {
+    "fingerprint": "4330e5c5b7c361f13a9ca02b09af329fdf7bbac8003aa0423fc6b8da63acd354",
+    "note": "Фрагмент 196 прямо сообщает о 2500 публикациях.",
+    "score": 2,
+    "citation_support": [
+      true
+    ]
+  },
+  "e6/original/Q02": {
+    "fingerprint": "8966e19031293832dc29aa2416ff57f949a5bc8ed5f1b4a312464b56be64e9ba",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/strict/Q02": {
+    "fingerprint": "deef8f99b5c3fbcd34f918dc8633b0c684d610bf0c5cab212711f4277f9c63d4",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/original/Q05": {
+    "fingerprint": "1ecef690954e65d86d505640aef596247659a589b2b3ac36de16fff5e3afb4cc",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/strict/Q05": {
+    "fingerprint": "8966e19031293832dc29aa2416ff57f949a5bc8ed5f1b4a312464b56be64e9ba",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/original/Q06": {
+    "fingerprint": "0084ca162648b22a88fcf0b6ae7a8c2781948fec1f566632fca2ea9f5989722d",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/strict/Q06": {
+    "fingerprint": "7cac2664f8472eb29d2a25093bb013a3784d5be42955965f9a26202478f02146",
+    "note": "Модель выдумала назначение β и γ, которых нет в переданном контексте.",
+    "score": 0
+  },
+  "e6/original/Q09": {
+    "fingerprint": "9507262a8508df6736e0c4558d1286899f5242dcd818f52b06d7e90eff37059a",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/strict/Q09": {
+    "fingerprint": "0dbb22c7ab044fd37cfd183b8f87c54134ee238a63c7ea7615b6a3729b5bbe32",
+    "note": "Ответ по существу не дан; фрагменты не содержат достаточных сведений.",
+    "score": 0
+  },
+  "e6/original/Q10": {
+    "fingerprint": "6e75ffa0a7fb3bfe657dfd0391d95f966233a2f057a31c591d5adb7b1ff0e58f",
+    "note": "Необоснованный отказ: короткий фрагмент 196 прямо сообщает число.",
+    "score": 0
+  },
+  "e6/strict/Q10": {
+    "fingerprint": "4330e5c5b7c361f13a9ca02b09af329fdf7bbac8003aa0423fc6b8da63acd354",
+    "note": "Число 2500 подтверждено фрагментом 196.",
+    "score": 2
+  },
+  "e6/original/N01": {
+    "fingerprint": "0c9fc9543e547f5684ef84e6c513017bab0da6b85ebec240b905353c4ad0b4b2",
+    "note": "Явный отказ; оформление местами содержит лишнюю ссылку, но фактического ответа нет.",
+    "absence": "refusal"
+  },
+  "e6/strict/N01": {
+    "fingerprint": "9ec977522e9184ac63ebe59d74323c07e1bdc33ec6007f7452bb2fdad9860dad",
+    "note": "Только ссылка или повтор названия источника; нет ни ответа, ни явного отказа.",
+    "absence": "invalid"
+  },
+  "e6/original/N02": {
+    "fingerprint": "51390f42669fe28f667779b4b89905b4b109fc17924132741fee71d8570062f6",
+    "note": "Явный отказ; оформление местами содержит лишнюю ссылку, но фактического ответа нет.",
+    "absence": "refusal"
+  },
+  "e6/strict/N02": {
+    "fingerprint": "71b02b300af13f611a638abd50db4205418916f13d4c9e38309a3b44434314aa",
+    "note": "Только ссылка или повтор названия источника; нет ни ответа, ни явного отказа.",
+    "absence": "invalid"
+  },
+  "e6/original/N03": {
+    "fingerprint": "87cd5316f22b32b17ebbbacab2714808291bc29b03e1bc4e61b7cd3158a7e5f2",
+    "note": "Явный отказ; оформление местами содержит лишнюю ссылку, но фактического ответа нет.",
+    "absence": "refusal"
+  },
+  "e6/strict/N03": {
+    "fingerprint": "42bef9970cdbf8a315c5146eea329489945df982b874a617f7fc102db913b16f",
+    "note": "Только ссылка или повтор названия источника; нет ни ответа, ни явного отказа.",
+    "absence": "invalid"
+  },
+  "e6/original/N04": {
+    "fingerprint": "965eecf3ef23e3d0f718f570f713ca2f4c4c4efb4b511fc59fe9eef242baee18",
+    "note": "Явный отказ; оформление местами содержит лишнюю ссылку, но фактического ответа нет.",
+    "absence": "refusal"
+  },
+  "e6/strict/N04": {
+    "fingerprint": "3760bf16701e1235dd489171424c71aec4e215b57e6c45f192e6c1d603a9492f",
+    "note": "Только ссылка или повтор названия источника; нет ни ответа, ни явного отказа.",
+    "absence": "invalid"
+  },
+  "e6/original/N05": {
+    "fingerprint": "1ecef690954e65d86d505640aef596247659a589b2b3ac36de16fff5e3afb4cc",
+    "note": "Явный отказ; оформление местами содержит лишнюю ссылку, но фактического ответа нет.",
+    "absence": "refusal"
+  },
+  "e6/strict/N05": {
+    "fingerprint": "deef8f99b5c3fbcd34f918dc8633b0c684d610bf0c5cab212711f4277f9c63d4",
+    "note": "Только ссылка или повтор названия источника; нет ни ответа, ни явного отказа.",
+    "absence": "invalid"
+  },
+  "e7/instruct/1": {
+    "fingerprint": "fd265059cc5367a1edef48524c9f0d75a8611922c14097707cd7a19ce4b14a0b",
+    "note": "Неверное определение и неподтверждённая атрибуция.",
+    "score": 0
+  },
+  "e7/training/1": {
+    "fingerprint": "38409bce4655f7d88f783cb9a44fbad28725a629c6e199647bff4ecc60096531",
+    "note": "Только ссылка, определение отсутствует.",
+    "score": 0
+  },
+  "e7/summaries/1": {
+    "fingerprint": "9861957ac9aaa9ebbfcfda525baa99b225fa186ed2f534c235cb84a62b970183",
+    "note": "Метрика не названа.",
+    "score": 0
+  },
+  "e7/instruct/2": {
+    "fingerprint": "4fc4102e0d2de0734de6dab936c73f6b4cba338b1c28c8894dc0d8aa0176e551",
+    "note": "Не уточнено, что сравнивается размер InstructGPT. Только ссылка.",
+    "score": 0,
+    "rewrite_ok": false
+  },
+  "e7/training/2": {
+    "fingerprint": "0b0cd167da7e5240e7528d241f1fcc8c3caf139dd285aa0ac064b80126fe8bd2",
+    "note": "Объект указан, но вопрос о роли β и γ заменён вопросом о коэффициентах вообще. Перечень долей не отвечает.",
+    "score": 0,
+    "rewrite_ok": false
+  },
+  "e7/summaries/2": {
+    "fingerprint": "ccde60cf1c67820c19dca9b14f261c0a9ca1544a9aca86fdffa655ff55575289",
+    "note": "Ссылка на неопределённый benchmark из диалога не раскрыта; модель отказалась.",
+    "score": 0,
+    "rewrite_ok": false
+  },
+  "e7/instruct/3": {
+    "fingerprint": "8664a15b94d28481380471b60449d4f8a47d80e26debec0277f96d85f7f8f5d0",
+    "note": "Объект и вопрос сохранены, но ответ состоит из ссылки.",
+    "score": 0,
+    "rewrite_ok": true
+  },
+  "e7/training/3": {
+    "fingerprint": "80bac37bc73eb48380bc73dab73995f621eee1a7f81e1ecb0cfe9b9dcbb2f4b4",
+    "note": "Переформулирование сохраняет предмет и вопрос о двух датасетах; названия не приведены.",
+    "score": 0,
+    "rewrite_ok": true
+  },
+  "e7/summaries/3": {
+    "fingerprint": "9245ba7a946694b893c9fd48f7a5d5dac3511b872fb872b0efd136a15fb3ab1d",
+    "note": "Не раскрыты ни метрика, ни набор TL;DR; только ссылка.",
+    "score": 0,
+    "rewrite_ok": false
+  }
+}

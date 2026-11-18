@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "Q04",
+    "review_key": "e3/0/Q04",
+    "fingerprint": "57bd9499cf9b9fa015ff3151886fcf60fd037a6e46cd7a5bc5dcaa28068685ba",
+    "question": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "query": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "reference": "The output of the reward model (RM).",
+    "evidence": [
+      {
+        "page": 6,
+        "quote": "We use the output of the RM as a scalar reward."
+      },
+      {
+        "page": 9,
+        "quote": "it produces a reward determined by the reward model and ends the episode"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 148,
+        "index_config": "1000/0",
+        "rank": 1,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 4782,
+        "chunk_id": 143,
+        "index_config": "1000/0",
+        "rank": 2,
+        "text": "our prompt distribution. We provide full instructions here.\n37",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 8,
+        "pdf_label": "8",
+        "printed_page": 8,
+        "start_index": 3735,
+        "chunk_id": 34,
+        "index_config": "1000/0",
+        "rank": 3,
+        "text": "5That is, if each of the possible (K 2 ) comparisons is treated as a separate data point, then each completion will potentially be used for K − 1 separate gradient updates. The model tends to overﬁt after a single epoch, so\nrepeating data within an epoch also causes it to overﬁt.\n8",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      148,
+      143,
+      34
+    ],
+    "context_chars": 707,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 0
+  },
+  {
+    "id": "Q05",
+    "review_key": "e3/0/Q05",
+    "fingerprint": "8a08d8ba6528693bf3c7420ae0315fc5219e13b01897f52683a247186792c3c8",
+    "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "query": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 4782,
+        "chunk_id": 143,
+        "index_config": "1000/0",
+        "rank": 1,
+        "text": "our prompt distribution. We provide full instructions here.\n37",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 35,
+        "pdf_label": "35",
+        "printed_page": 35,
+        "start_index": 911,
+        "chunk_id": 132,
+        "index_config": "1000/0",
+        "rank": 2,
+        "text": "Table 10 we break down token lengths by use case. Finally, we also report lengths of contractor-written\ndemonstrations used for our SFT model in table 11, both for contractor-written and labeler-written\nprompts.\n35",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 22,
+        "pdf_label": "22",
+        "printed_page": 22,
+        "start_index": 3874,
+        "chunk_id": 96,
+        "index_config": "1000/0",
+        "rank": 3,
+        "text": "ing comprehension benchmark requiring discrete reasoning over paragraphs. arXiv preprint\narXiv:1903.00161.\nFedus, W., Zoph, B., and Shazeer, N. (2021). Switch transformers: Scaling to trillion parameter\nmodels with simple and efﬁcient sparsity. arXiv preprint arXiv:2101.03961.\n22",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      143,
+      132,
+      96
+    ],
+    "context_chars": 556,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 0
+  },
+  {
+    "id": "Q06",
+    "review_key": "e3/0/Q06",
+    "fingerprint": "d8260a6837a4e0e8cd590e19d821e738164c5579bc8512343b2bd57cbd25ce39",
+    "question": "What do β and γ control in the PPO-ptx objective?",
+    "query": "What do β and γ control in the PPO-ptx objective?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 4782,
+        "chunk_id": 143,
+        "index_config": "1000/0",
+        "rank": 1,
+        "text": "our prompt distribution. We provide full instructions here.\n37",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 22,
+        "pdf_label": "22",
+        "printed_page": 22,
+        "start_index": 3874,
+        "chunk_id": 96,
+        "index_config": "1000/0",
+        "rank": 2,
+        "text": "ing comprehension benchmark requiring discrete reasoning over paragraphs. arXiv preprint\narXiv:1903.00161.\nFedus, W., Zoph, B., and Shazeer, N. (2021). Switch transformers: Scaling to trillion parameter\nmodels with simple and efﬁcient sparsity. arXiv preprint arXiv:2101.03961.\n22",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 148,
+        "index_config": "1000/0",
+        "rank": 3,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      143,
+      96,
+      148
+    ],
+    "context_chars": 705,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 0
+  },
+  {
+    "id": "Q07",
+    "review_key": "e3/0/Q07",
+    "fingerprint": "7e766507c58c977ad7d377d8bb1edc6e1a91b03e187dc837a85f6ca666fa4c45",
+    "question": "How many labeler groups and folds were used to test reward-model generalization?",
+    "query": "How many labeler groups and folds were used to test reward-model generalization?",
+    "reference": "Five groups and five-fold cross-validation.",
+    "evidence": [
+      {
+        "page": 12,
+        "quote": "we split our labelers into 5 groups, and train 5 RMs (with 3 different seeds) using 5-fold cross validation"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 4782,
+        "chunk_id": 143,
+        "index_config": "1000/0",
+        "rank": 1,
+        "text": "our prompt distribution. We provide full instructions here.\n37",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 22,
+        "pdf_label": "22",
+        "printed_page": 22,
+        "start_index": 3874,
+        "chunk_id": 96,
+        "index_config": "1000/0",
+        "rank": 2,
+        "text": "ing comprehension benchmark requiring discrete reasoning over paragraphs. arXiv preprint\narXiv:1903.00161.\nFedus, W., Zoph, B., and Shazeer, N. (2021). Switch transformers: Scaling to trillion parameter\nmodels with simple and efﬁcient sparsity. arXiv preprint arXiv:2101.03961.\n22",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 8,
+        "pdf_label": "8",
+        "printed_page": 8,
+        "start_index": 3735,
+        "chunk_id": 34,
+        "index_config": "1000/0",
+        "rank": 3,
+        "text": "5That is, if each of the possible (K 2 ) comparisons is treated as a separate data point, then each completion will potentially be used for K − 1 separate gradient updates. The model tends to overﬁt after a single epoch, so\nrepeating data within an epoch also causes it to overﬁt.\n8",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      143,
+      96,
+      34
+    ],
+    "context_chars": 624,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 0
+  },
+  {
+    "id": "Q08",
+    "review_key": "e3/0/Q08",
+    "fingerprint": "28a88d16bb2a3f3ca4db561604c2bd76c3bb42f8a0716453dd93d6220dd7510f",
+    "question": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "query": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "reference": "SQuADv2 and DROP.",
+    "evidence": [
+      {
+        "page": 15,
+        "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 53,
+        "pdf_label": "53",
+        "printed_page": 53,
+        "start_index": 1847,
+        "chunk_id": 180,
+        "index_config": "1000/0",
+        "rank": 1,
+        "text": "these experiments. We ﬁnd that even by increasing the KL reward coefﬁcient to 2.0, which is 100\ntimes of the default value, the regressions still cannot be ﬁxed. As expected, too large KL reward\ncoefﬁcient causes a signiﬁcant drop in the validation reward. This result demonstrates that pretraining\ndata distribution is critical for ﬁxing the regressions on the public NLP datasets and maintaining the\ncapabilities of the pretrained model.\n53",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 4782,
+        "chunk_id": 143,
+        "index_config": "1000/0",
+        "rank": 2,
+        "text": "our prompt distribution. We provide full instructions here.\n37",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 21,
+        "pdf_label": "21",
+        "printed_page": 21,
+        "start_index": 3880,
+        "chunk_id": 91,
+        "index_config": "1000/0",
+        "rank": 3,
+        "text": "parrots: Can language models be too big? In Proceedings of the 2021 ACM Conference on\nFairness, Accountability, and Transparency, pages 610-623.\nBlodgett, S. L., Barocas, S., Daumé III, H., and Wallach, H. (2020). Language (technology) is power:\nA critical survey of\" bias\" in nlp. arXiv preprint arXiv:2005.14050.\n21",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      180,
+      143,
+      91
+    ],
+    "context_chars": 821,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 0
+  },
+  {
+    "id": "Q04",
+    "review_key": "e3/100/Q04",
+    "fingerprint": "1c59b87da4a80a6d2e87548298d16c328c2616d4ad73a43bf8e5136fde02ec55",
+    "question": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "query": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "reference": "The output of the reward model (RM).",
+    "evidence": [
+      {
+        "page": 6,
+        "quote": "We use the output of the RM as a scalar reward."
+      },
+      {
+        "page": 9,
+        "quote": "it produces a reward determined by the reward model and ends the episode"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 38,
+        "pdf_label": "38",
+        "printed_page": 38,
+        "start_index": 3681,
+        "chunk_id": 156,
+        "index_config": "1000/100",
+        "rank": 1,
+        "text": "use to label data.\n38",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 157,
+        "index_config": "1000/100",
+        "rank": 2,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 4450,
+        "chunk_id": 88,
+        "index_config": "1000/100",
+        "rank": 3,
+        "text": "use a subset of the comparison data. One could also try constrained optimization approaches (Achiam\net al., 2017) that maximize the score from a reward model conditioned on generating a small number\nof harmful behaviors.\n19",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      156,
+      157,
+      88
+    ],
+    "context_chars": 607,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 100
+  },
+  {
+    "id": "Q05",
+    "review_key": "e3/100/Q05",
+    "fingerprint": "b53b3cac68c021d0047edaa286446f52528901f5376551efcd4ca4afa4b47771",
+    "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "query": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 38,
+        "pdf_label": "38",
+        "printed_page": 38,
+        "start_index": 3681,
+        "chunk_id": 156,
+        "index_config": "1000/100",
+        "rank": 1,
+        "text": "use to label data.\n38",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2691,
+        "chunk_id": 228,
+        "index_config": "1000/100",
+        "rank": 2,
+        "text": "from 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 16,
+        "pdf_label": "16",
+        "printed_page": 16,
+        "start_index": 4374,
+        "chunk_id": 71,
+        "index_config": "1000/100",
+        "rank": 3,
+        "text": "writing a summary in a speciﬁed number of sentences).\n9We generally instruct our labelers to skip evaluations where they are missing the required expertise, though\nsometimes labelers use a translation service to evaluate simple instructions in languages that they do not speak.\n16",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      156,
+      228,
+      71
+    ],
+    "context_chars": 389,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 100
+  },
+  {
+    "id": "Q06",
+    "review_key": "e3/100/Q06",
+    "fingerprint": "94d8faa07d36a246327582e8a4bf1901e91d556b8596ae5907cd698aead8cd4b",
+    "question": "What do β and γ control in the PPO-ptx objective?",
+    "query": "What do β and γ control in the PPO-ptx objective?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 38,
+        "pdf_label": "38",
+        "printed_page": 38,
+        "start_index": 3681,
+        "chunk_id": 156,
+        "index_config": "1000/100",
+        "rank": 1,
+        "text": "use to label data.\n38",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2691,
+        "chunk_id": 228,
+        "index_config": "1000/100",
+        "rank": 2,
+        "text": "from 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 36,
+        "pdf_label": "36",
+        "printed_page": 36,
+        "start_index": 3503,
+        "chunk_id": 145,
+        "index_config": "1000/100",
+        "rank": 3,
+        "text": "most applications.\nWe show excerpts of our instructions for our ﬁnal evaluations on our prompt distribution in Table 10,\nand on the RealToxicityPrompts distribution in Table 11.\nB.3 Labeler demographic data\nWe sent a voluntary, anonymous survey to our labelers to better understand their demographics. We\nshow the results from the 19 respondents in Table 12. Overall, we ﬁnd that our labelers are quite\n36",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      156,
+      228,
+      145
+    ],
+    "context_chars": 514,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 100
+  },
+  {
+    "id": "Q07",
+    "review_key": "e3/100/Q07",
+    "fingerprint": "102779f3c644e9586948b17c42bdf3192bfb018f4e01af19aa34bb041940ca34",
+    "question": "How many labeler groups and folds were used to test reward-model generalization?",
+    "query": "How many labeler groups and folds were used to test reward-model generalization?",
+    "reference": "Five groups and five-fold cross-validation.",
+    "evidence": [
+      {
+        "page": 12,
+        "quote": "we split our labelers into 5 groups, and train 5 RMs (with 3 different seeds) using 5-fold cross validation"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 38,
+        "pdf_label": "38",
+        "printed_page": 38,
+        "start_index": 3681,
+        "chunk_id": 156,
+        "index_config": "1000/100",
+        "rank": 1,
+        "text": "use to label data.\n38",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 4347,
+        "chunk_id": 82,
+        "index_config": "1000/100",
+        "rank": 2,
+        "text": "out of processes that may be harmful.\n10Note that while ﬁne-tuning models using human data is common practice when deploying ML systems, the\npurpose of these efforts is to obtain a model that performs well on a company’s speciﬁc use case, rather than\nadvancing the alignment of general-purpose ML models.\n18",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 40,
+        "pdf_label": "40",
+        "printed_page": 40,
+        "start_index": 1722,
+        "chunk_id": 160,
+        "index_config": "1000/100",
+        "rank": 3,
+        "text": "a batch size of 8. To select learning rates, we did a geometric search over 7 LRs for 1.3B and 6B,\nand 5 LRs for 175B. We also tuned the number of epochs using geometric search. Our ﬁnal models\n40",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      156,
+      82,
+      160
+    ],
+    "context_chars": 524,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 100
+  },
+  {
+    "id": "Q08",
+    "review_key": "e3/100/Q08",
+    "fingerprint": "94ba2bedcd335aa9371707c8b90f7bf2eace170b19de99a1d0bae282b5613296",
+    "question": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "query": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "reference": "SQuADv2 and DROP.",
+    "evidence": [
+      {
+        "page": 15,
+        "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 4347,
+        "chunk_id": 82,
+        "index_config": "1000/100",
+        "rank": 1,
+        "text": "out of processes that may be harmful.\n10Note that while ﬁne-tuning models using human data is common practice when deploying ML systems, the\npurpose of these efforts is to obtain a model that performs well on a company’s speciﬁc use case, rather than\nadvancing the alignment of general-purpose ML models.\n18",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 38,
+        "pdf_label": "38",
+        "printed_page": 38,
+        "start_index": 3681,
+        "chunk_id": 156,
+        "index_config": "1000/100",
+        "rank": 2,
+        "text": "use to label data.\n38",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 13,
+        "pdf_label": "13",
+        "printed_page": 13,
+        "start_index": 2657,
+        "chunk_id": 57,
+        "index_config": "1000/100",
+        "rank": 3,
+        "text": "fabricate information) less often on closed-domain tasks from our API distribution, which we’ve\nshown in Figure 4.\nInstructGPT shows small improvements in toxicity over GPT-3, but not bias. We ﬁrst evaluate\nour models on the RealToxicityPrompts dataset (Gehman et al., 2020). We do this in two ways: we\nrun model samples through the Perspective API8 to obtain automatic toxicity scores, which is the\n8www.perspectiveapi.com\n13",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      82,
+      156,
+      57
+    ],
+    "context_chars": 754,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 100
+  },
+  {
+    "id": "Q04",
+    "review_key": "e3/200/Q04",
+    "fingerprint": "e644ea776123c9036c1359df5d4b6674e7b685932852378650c4eb7284c91746",
+    "question": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "query": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+    "reference": "The output of the reward model (RM).",
+    "evidence": [
+      {
+        "page": 6,
+        "quote": "We use the output of the RM as a scalar reward."
+      },
+      {
+        "page": 9,
+        "quote": "it produces a reward determined by the reward model and ends the episode"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 168,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      168,
+      246
+    ],
+    "context_chars": 788,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 200
+  },
+  {
+    "id": "Q05",
+    "review_key": "e3/200/Q05",
+    "fingerprint": "251caeda4fd90606be14b96bb853d36af151d3d4f0db703a5809a3dec5d91f12",
+    "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "query": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      240,
+      246
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        240,
+        246,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 200
+  },
+  {
+    "id": "Q06",
+    "review_key": "e3/200/Q06",
+    "fingerprint": "7d730b582c1edcc15f3461b414b45722b5714701eac9460f1f3a85fd57347903",
+    "question": "What do β and γ control in the PPO-ptx objective?",
+    "query": "What do β and γ control in the PPO-ptx objective?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 200
+  },
+  {
+    "id": "Q07",
+    "review_key": "e3/200/Q07",
+    "fingerprint": "577e5ab7933e26135fd616640f6616bb41205287d6e7719a9848f3a61902add3",
+    "question": "How many labeler groups and folds were used to test reward-model generalization?",
+    "query": "How many labeler groups and folds were used to test reward-model generalization?",
+    "reference": "Five groups and five-fold cross-validation.",
+    "evidence": [
+      {
+        "page": 12,
+        "quote": "we split our labelers into 5 groups, and train 5 RMs (with 3 different seeds) using 5-fold cross validation"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 4062,
+        "chunk_id": 96,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "sampling procedure at inference time using a smaller model (Dathathri et al., 2019).\nWhile we mainly focus on RLHF, there are many other algorithms that could be used to train policies\non our demonstration and comparison data to get even better results. For example, one could explore\nexpert iteration (Anthony et al., 2017; Silver et al., 2017), or simpler behavior cloning methods that\nuse a subset of the comparison data. One could also try constrained optimization approaches (Achiam\net al., 2017) that maximize the score from a reward model conditioned on generating a small number\nof harmful behaviors.\n19",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      96
+    ],
+    "context_chars": 1036,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 200
+  },
+  {
+    "id": "Q08",
+    "review_key": "e3/200/Q08",
+    "fingerprint": "f4b366727bf45f287a876fcaea45ab3071e0f8b8c034005dfba092eb63715804",
+    "question": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "query": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+    "reference": "SQuADv2 and DROP.",
+    "evidence": [
+      {
+        "page": 15,
+        "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      246,
+      187,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "overlap": 200
+  }
+]

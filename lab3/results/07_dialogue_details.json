@@ -1,0 +1,993 @@
+[
+  {
+    "id": "D01",
+    "review_key": "e7/instruct/1",
+    "fingerprint": "fd265059cc5367a1edef48524c9f0d75a8611922c14097707cd7a19ce4b14a0b",
+    "question": "What is InstructGPT and how was it produced?",
+    "query": "What is InstructGPT and how was it produced?",
+    "reference": "A family of GPT-3 models fine-tuned using supervised demonstrations and RL from human feedback.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback. We call the resulting models InstructGPT."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": "InstructGPT - это разрабатываемая в Google AI Research (GAR) лаборатория, которая является частью Google's DeepMind.",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Неверное определение и неподтверждённая атрибуция.",
+    "session": "instruct",
+    "turn": 1,
+    "history_used": 0,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ]
+  },
+  {
+    "id": "D03",
+    "review_key": "e7/training/1",
+    "fingerprint": "38409bce4655f7d88f783cb9a44fbad28725a629c6e199647bff4ecc60096531",
+    "question": "What is PPO-ptx in InstructGPT training?",
+    "query": "What is PPO-ptx in InstructGPT training?",
+    "reference": "PPO with pretraining gradients mixed into its updates.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "mixing the pretraining gradients into the PPO gradients, in order to fix the performance regressions on public NLP datasets. We call these models “PPO-ptx.”"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 6,
+        "pdf_label": "6",
+        "printed_page": 6,
+        "start_index": 3119,
+        "chunk_id": 29,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "data is in the training set. To avoid the models learning potentially sensitive customer details, we\nﬁlter all prompts in the training split for personally identiﬁable information (PII).\n4This is an interface hosted by OpenAI to interact directly with models on our API; see https://beta.\nopenai.com/playground.\n6",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      29
+    ],
+    "context_chars": 738,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 29, стр. 6] [LML instruct (2).pdf]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Только ссылка, определение отсутствует.",
+    "session": "training",
+    "turn": 1,
+    "history_used": 0,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 6,
+        "pdf_label": "6",
+        "printed_page": 6,
+        "start_index": 3119,
+        "chunk_id": 29,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "data is in the training set. To avoid the models learning potentially sensitive customer details, we\nﬁlter all prompts in the training split for personally identiﬁable information (PII).\n4This is an interface hosted by OpenAI to interact directly with models on our API; see https://beta.\nopenai.com/playground.\n6",
+        "contains_annotated_evidence": false
+      }
+    ]
+  },
+  {
+    "id": "D04",
+    "review_key": "e7/summaries/1",
+    "fingerprint": "9861957ac9aaa9ebbfcfda525baa99b225fa186ed2f534c235cb84a62b970183",
+    "question": "What metric was used to evaluate TL;DR generated summaries?",
+    "query": "What metric was used to evaluate TL;DR generated summaries?",
+    "reference": "ROUGE-L against reference summaries.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 168,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      168,
+      246
+    ],
+    "context_chars": 788,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 168, стр. 39]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Метрика не названа.",
+    "session": "summaries",
+    "turn": 1,
+    "history_used": 0,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 168,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "review_key": "e7/instruct/2",
+    "fingerprint": "4fc4102e0d2de0734de6dab936c73f6b4cba338b1c28c8894dc0d8aa0176e551",
+    "question": "Which size beat the 175B baseline?",
+    "query": "What is the size of the model that beat the 175B baseline?",
+    "reference": "The 1.3B parameter InstructGPT model.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "outputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3"
+      },
+      {
+        "page": 2,
+        "quote": "outputs from our 1.3B PPO-ptx model are preferred to those from the 175B GPT-3"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 40,
+        "pdf_label": "40",
+        "printed_page": 40,
+        "start_index": 1536,
+        "chunk_id": 171,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "down to 10% of the original learning rate, with no learning rate warmup. For our 1.3B and 6B\nmodels, we use an LR of 9.65e-6 and a batch size of 32. For 175B, we use a LR of 5.03e-6 and\na batch size of 8. To select learning rates, we did a geometric search over 7 LRs for 1.3B and 6B,\nand 5 LRs for 175B. We also tuned the number of epochs using geometric search. Our ﬁnal models\n40",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 16,
+        "pdf_label": "16",
+        "printed_page": 16,
+        "start_index": 1524,
+        "chunk_id": 75,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "the cannonball will bounce off of the pump-\nkin. A pumpkin is a strong magnet, so strong\nthat it can manipulate metal objects.\nThere is no way to accurately predict what will happen if you ﬁre\na cannonball directly at a pumpkin at high speeds, since there are\ntoo many unpredictable factors involved. Some of these factors\nmight include the size, weight, and density of the cannonball, the\nmaterial that the pumpkin is made of, the velocity and impact force\nof the cannonball, and the distance between the cannonball and the\npumpkin at the moment of impact. Some of the more likely possible\noutcomes include breaking or knocking the pumpkin to the ground,\ncracking the pumpkin, or completely obliterating it.\nFigure 9: Simple mistakes in the 175B PPO-ptx model (InstructGPT 175B) compared to GPT-3 175B\nwith no additional preﬁxing. Prompts are cherry-picked to illustrate certain behaviors, but the outputs",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      171,
+      75
+    ],
+    "context_chars": 1425,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 171, стр. 40]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Не уточнено, что сравнивается размер InstructGPT. Только ссылка.",
+    "session": "instruct",
+    "turn": 2,
+    "history_used": 1,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": false
+  },
+  {
+    "id": "Q06",
+    "review_key": "e7/training/2",
+    "fingerprint": "0b0cd167da7e5240e7528d241f1fcc8c3caf139dd285aa0ac064b80126fe8bd2",
+    "question": "What do its two coefficients control?",
+    "query": "What are the coefficients that control the performance of PPO-ptx in InstructGPT training?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 51,
+        "pdf_label": "51",
+        "printed_page": 51,
+        "start_index": 805,
+        "chunk_id": 198,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "and a variety of natural language capabilities. The results of these evaluations are in Table 14. We\nshow zero-shot performance of our models in Figure 28, and few-shot performance in Figure 29. We\ncan see that the PPO model without pretraining mix has performance regressions on many datasets,\nparticularly in the few-shot setting, and that these regressions are mitigated by our PPO-ptx model.\n51",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 56,
+        "pdf_label": "56",
+        "printed_page": 56,
+        "start_index": 3882,
+        "chunk_id": 211,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "We experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.\n56",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      198,
+      211
+    ],
+    "context_chars": 1017,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 211, стр. 56] [Coefficients controlling PPO-ptx performance in InstructGPT training: 0%, 10%, and 50% pretraining data mix].",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Объект указан, но вопрос о роли β и γ заменён вопросом о коэффициентах вообще. Перечень долей не отвечает.",
+    "session": "training",
+    "turn": 2,
+    "history_used": 1,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": false
+  },
+  {
+    "id": "Q10",
+    "review_key": "e7/summaries/2",
+    "fingerprint": "ccde60cf1c67820c19dca9b14f261c0a9ca1544a9aca86fdffa655ff55575289",
+    "question": "How many posts did that benchmark contain?",
+    "query": "What is the number of posts in the benchmark mentioned in the recent dialogue?",
+    "reference": "2,500 Reddit posts.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "2,500 Reddit posts to summarize."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": "В предоставленных фрагментах недостаточно информации для ответа.",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Ссылка на неопределённый benchmark из диалога не раскрыта; модель отказалась.",
+    "session": "summaries",
+    "turn": 2,
+    "history_used": 1,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": false
+  },
+  {
+    "id": "Q01",
+    "review_key": "e7/instruct/3",
+    "fingerprint": "8664a15b94d28481380471b60449d4f8a47d80e26debec0277f96d85f7f8f5d0",
+    "question": "What examples were used for its initial supervised stage?",
+    "query": "What examples were used in InstructGPT's initial supervised stage?",
+    "reference": "Demonstrations of desired behavior written by human labelers.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": "[Фрагмент 246, стр. 68]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Объект и вопрос сохранены, но ответ состоит из ссылки.",
+    "session": "instruct",
+    "turn": 3,
+    "history_used": 2,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 3259,
+        "chunk_id": 161,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "• Not writing sexual or violent content if it’s not asked for.\n• Not giving bad real-world advice, or promoting illegal activity.\nEvaluating model outputs may involve making trade-offs between these criteria. These trade-offs will depend on the task.\nUse the following guidelines to help select between outputs when making these trade-offs:\nFor most tasks, being harmless and truthful is more important than being helpful. So in most cases, rate an output that’s\nmore truthful and harmless higher than an output that’s more helpful. However, if: (a) one output is much more helpful\nthan the other; (b) that output is only slightly less truthful / harmless; and (c) the task does not seem to be in a “high stakes\ndomain” (e.g. loan applications, therapy, medical or legal advice, etc.); then rate the more helpful output higher. When\nchoosing between outputs that are similarly helpful but are untruthful or harmful in different ways, ask: which output is more",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": true
+  },
+  {
+    "id": "Q08",
+    "review_key": "e7/training/3",
+    "fingerprint": "80bac37bc73eb48380bc73dab73995f621eee1a7f81e1ecb0cfe9b9dcbb2f4b4",
+    "question": "On which two benchmarks did it reverse regressions?",
+    "query": "What are the two benchmarks on which PPO-ptx reversed regressions?",
+    "reference": "SQuADv2 and DROP.",
+    "evidence": [
+      {
+        "page": 15,
+        "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 51,
+        "pdf_label": "51",
+        "printed_page": 51,
+        "start_index": 805,
+        "chunk_id": 198,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "and a variety of natural language capabilities. The results of these evaluations are in Table 14. We\nshow zero-shot performance of our models in Figure 28, and few-shot performance in Figure 29. We\ncan see that the PPO model without pretraining mix has performance regressions on many datasets,\nparticularly in the few-shot setting, and that these regressions are mitigated by our PPO-ptx model.\n51",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      198,
+      246
+    ],
+    "context_chars": 823,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 198, стр. 51] [LML instruct (2).pdf] и [Фрагмент 246, стр. 68] [LML instruct (2).pdf]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Переформулирование сохраняет предмет и вопрос о двух датасетах; названия не приведены.",
+    "session": "training",
+    "turn": 3,
+    "history_used": 2,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": true
+  },
+  {
+    "id": "D04",
+    "review_key": "e7/summaries/3",
+    "fingerprint": "9245ba7a946694b893c9fd48f7a5d5dac3511b872fb872b0efd136a15fb3ab1d",
+    "question": "What was that score compared against?",
+    "query": "What was the score compared to?",
+    "reference": "ROUGE-L against reference summaries.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 9,
+        "pdf_label": "9",
+        "printed_page": 9,
+        "start_index": 3064,
+        "chunk_id": 45,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "6To obtain this preﬁx, authors RL and DA held a preﬁx-ﬁnding competition: each spent an hour interacting\nwith GPT-3 to come up with their two best preﬁxes. The winning preﬁx was the one that led GPT-3 to attain the\nhighest RM score on the prompt validation set. DA won.\n9",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      45
+    ],
+    "context_chars": 696,
+    "near_duplicate_pairs": [],
+    "answer": "[Фрагмент 45, стр. 9]",
+    "score_0_2": 0,
+    "answer_without_evidence": null,
+    "review_note": "Не раскрыты ни метрика, ни набор TL;DR; только ссылка.",
+    "session": "summaries",
+    "turn": 3,
+    "history_used": 2,
+    "raw_query_hit": false,
+    "raw_query_fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 9,
+        "pdf_label": "9",
+        "printed_page": 9,
+        "start_index": 3064,
+        "chunk_id": 45,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "6To obtain this preﬁx, authors RL and DA held a preﬁx-ﬁnding competition: each spent an hour interacting\nwith GPT-3 to come up with their two best preﬁxes. The winning preﬁx was the one that led GPT-3 to attain the\nhighest RM score on the prompt validation set. DA won.\n9",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "rewrite_ok": false
+  }
+]

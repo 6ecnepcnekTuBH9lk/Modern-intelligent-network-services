@@ -1,0 +1,333 @@
+{
+  "positive": {
+    "Q01": {
+      "question": "What data were used for supervised fine-tuning in InstructGPT?",
+      "answer": "Demonstrations of desired behavior written by human labelers.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+        }
+      ]
+    },
+    "Q02": {
+      "question": "Which InstructGPT model size was preferred to the 175B GPT-3 in human evaluations?",
+      "answer": "The 1.3B parameter InstructGPT model.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "outputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3"
+        },
+        {
+          "page": 2,
+          "quote": "outputs from our 1.3B PPO-ptx model are preferred to those from the 175B GPT-3"
+        }
+      ]
+    },
+    "Q03": {
+      "question": "What three behavior goals are used to describe aligned language models?",
+      "answer": "Helpfulness, honesty, and harmlessness.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "we want language models to be helpful (they should help the user solve their task), honest (they shouldn’t fabricate information or mislead the user), and harmless"
+        },
+        {
+          "page": 10,
+          "quote": "models to be aligned if they are helpful, honest, and harmless"
+        }
+      ]
+    },
+    "Q04": {
+      "question": "What was used as the scalar reward in step 3 of the InstructGPT training procedure?",
+      "answer": "The output of the reward model (RM).",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "We use the output of the RM as a scalar reward."
+        },
+        {
+          "page": 9,
+          "quote": "it produces a reward determined by the reward model and ends the episode"
+        }
+      ]
+    },
+    "Q05": {
+      "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+      "answer": "77.3 ± 1.3%.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+        }
+      ]
+    },
+    "Q06": {
+      "question": "What do β and γ control in the PPO-ptx objective?",
+      "answer": "β controls the KL penalty; γ controls the pretraining gradients.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+        }
+      ]
+    },
+    "Q07": {
+      "question": "How many labeler groups and folds were used to test reward-model generalization?",
+      "answer": "Five groups and five-fold cross-validation.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "we split our labelers into 5 groups, and train 5 RMs (with 3 different seeds) using 5-fold cross validation"
+        }
+      ]
+    },
+    "Q08": {
+      "question": "On which two datasets did the appropriate pretraining mix coefficient reverse performance regressions?",
+      "answer": "SQuADv2 and DROP.",
+      "evidence": [
+        {
+          "page": 15,
+          "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+        }
+      ]
+    },
+    "Q09": {
+      "question": "What fraction of the InstructGPT prompt dataset was classified as English by langid.py?",
+      "answer": "About 96%. The estimated true fraction may be 99% or higher.",
+      "evidence": [
+        {
+          "page": 35,
+          "quote": "around 96% of our dataset (110k datapoints) is classified as English"
+        }
+      ]
+    },
+    "Q10": {
+      "question": "How many Reddit posts were used in the TL;DR summarization evaluation dataset?",
+      "answer": "2,500 Reddit posts.",
+      "evidence": [
+        {
+          "page": 50,
+          "quote": "2,500 Reddit posts to summarize."
+        }
+      ]
+    },
+    "D01": {
+      "question": "What is InstructGPT and how was it produced?",
+      "answer": "A family of GPT-3 models fine-tuned using supervised demonstrations and RL from human feedback.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback. We call the resulting models InstructGPT."
+        }
+      ]
+    },
+    "D02": {
+      "question": "What is the InstructGPT reward model trained to predict?",
+      "answer": "Which output human labelers prefer for a given input.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "We then train a reward model to predict the human-preferred output."
+        },
+        {
+          "page": 8,
+          "quote": "we trained a model to take in a prompt and response, and output a scalar reward"
+        }
+      ]
+    },
+    "D03": {
+      "question": "What is PPO-ptx in InstructGPT training?",
+      "answer": "PPO with pretraining gradients mixed into its updates.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "mixing the pretraining gradients into the PPO gradients, in order to fix the performance regressions on public NLP datasets. We call these models “PPO-ptx.”"
+        }
+      ]
+    },
+    "D04": {
+      "question": "What metric was used to evaluate TL;DR generated summaries?",
+      "answer": "ROUGE-L against reference summaries.",
+      "evidence": [
+        {
+          "page": 50,
+          "quote": "Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries."
+        }
+      ]
+    }
+  },
+  "early": [
+    "Q01",
+    "Q02",
+    "Q03"
+  ],
+  "late": [
+    "Q05",
+    "Q09",
+    "Q10"
+  ],
+  "size": [
+    "Q01",
+    "Q02",
+    "Q03",
+    "Q04",
+    "Q05",
+    "Q06",
+    "Q07",
+    "Q08",
+    "Q09",
+    "Q10"
+  ],
+  "boundary_cases": [
+    {
+      "id": "Q04",
+      "page": 6,
+      "evidence_begin": 1890,
+      "evidence_end": 1937,
+      "boundary": 1914,
+      "quote": "We use the output of the RM as a scalar reward."
+    },
+    {
+      "id": "Q05",
+      "page": 8,
+      "evidence_begin": 969,
+      "evidence_end": 1018,
+      "boundary": 995,
+      "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+    },
+    {
+      "id": "Q06",
+      "page": 9,
+      "evidence_begin": 1795,
+      "evidence_end": 1944,
+      "boundary": 1873,
+      "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+    },
+    {
+      "id": "Q07",
+      "page": 12,
+      "evidence_begin": 1833,
+      "evidence_end": 1940,
+      "boundary": 1916,
+      "quote": "we split our labelers into 5 groups, and train 5 RMs (with 3 different seeds) using 5-fold cross validation"
+    },
+    {
+      "id": "Q08",
+      "page": 15,
+      "evidence_begin": 2892,
+      "evidence_end": 3001,
+      "boundary": 2944,
+      "quote": "a value of the pretraining mix coefficient that both reverses the performance regressions on SQuADv2 and DROP"
+    }
+  ],
+  "cited": [
+    "Q02",
+    "Q05",
+    "Q06",
+    "Q09",
+    "Q10"
+  ],
+  "paraphrases": {
+    "Q01": "What examples of desirable behavior did people supply for the first learning stage that created InstructGPT?",
+    "Q05": "How often did the independent raters agree with one another, and what margin was reported?",
+    "Q06": "In the method that continues to learn from the initial text corpus during policy improvement, what does each of the two weighting factors adjust?",
+    "Q09": "What share of the inputs for this instruction-following project did the language detector identify as being written in English?",
+    "Q10": "How many forum entries were there in the test of the model's ability to condense long messages?"
+  },
+  "dialogues": {
+    "instruct": [
+      [
+        "D01",
+        "What is InstructGPT and how was it produced?"
+      ],
+      [
+        "Q02",
+        "Which size beat the 175B baseline?"
+      ],
+      [
+        "Q01",
+        "What examples were used for its initial supervised stage?"
+      ]
+    ],
+    "training": [
+      [
+        "D03",
+        "What is PPO-ptx in InstructGPT training?"
+      ],
+      [
+        "Q06",
+        "What do its two coefficients control?"
+      ],
+      [
+        "Q08",
+        "On which two benchmarks did it reverse regressions?"
+      ]
+    ],
+    "summaries": [
+      [
+        "D04",
+        "What metric was used to evaluate TL;DR generated summaries?"
+      ],
+      [
+        "Q10",
+        "How many posts did that benchmark contain?"
+      ],
+      [
+        "D04",
+        "What was that score compared against?"
+      ]
+    ]
+  },
+  "absent": {
+    "N01": [
+      "What SHA-256 checksum does the paper give for the trained 6B reward-model checkpoint?",
+      [
+        "sha-256",
+        "sha256",
+        "checksum",
+        "checkpoint"
+      ],
+      "Методы и приложение C описывают модель и выбор checkpoint, без контрольной суммы."
+    ],
+    "N02": [
+      "What exact CUDA driver patch version was used during InstructGPT training?",
+      [
+        "cuda",
+        "driver version",
+        "gpu"
+      ],
+      "В тексте и приложении C есть параметры обучения, но версия драйвера не указана."
+    ],
+    "N03": [
+      "What was the p95 serving latency in milliseconds for the 1.3B InstructGPT on the API?",
+      [
+        "p95",
+        "95th percentile",
+        "latency",
+        "milliseconds"
+      ],
+      "Результаты API-оценки описывают предпочтения, а не задержку API."
+    ],
+    "N04": [
+      "What was the hourly carbon footprint in kg CO2e of PPO training?",
+      [
+        "carbon",
+        "co2e",
+        "emissions",
+        "petaflops"
+      ],
+      "Вычислительная стоимость обсуждается без почасовых выбросов CO2e."
+    ],
+    "N05": [
+      "What is the median waiting time in seconds between successive ranking tasks for an annotator?",
+      [
+        "waiting time",
+        "median wait",
+        "seconds",
+        "labeler satisfaction"
+      ],
+      "В приложении B есть процесс отбора и опрос разметчиков, но нет медианного интервала между заданиями."
+    ]
+  }
+}

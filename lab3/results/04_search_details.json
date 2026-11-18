@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "Q01",
+    "review_key": "e4/BoW/exact/Q01",
+    "fingerprint": "61b8a409ab37d89b76e5078921f84445262dbd79f38821589ab150d6cbd93138",
+    "question": "What data were used for supervised fine-tuning in InstructGPT?",
+    "query": "What data were used for supervised fine-tuning in InstructGPT?",
+    "reference": "Demonstrations of desired behavior written by human labelers.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 3,
+        "pdf_label": "3",
+        "printed_page": 3,
+        "start_index": 0,
+        "chunk_id": 9,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "Figure 2: A diagram illustrating the three steps of our method: (1) supervised ﬁne-tuning (SFT), (2)\nreward model (RM) training, and (3) reinforcement learning via proximal policy optimization (PPO)\non this reward model. Blue arrows indicate that this data is used to train one of our models. In Step 2,\nboxes A-D are samples from our models that get ranked by labelers. See Section 3 for more details\non our method.\nsizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture. Our main\nﬁndings are as follows:\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set,\noutputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,\ndespite having over 100x fewer parameters. These models have the same architecture, and differ only\nby the fact that InstructGPT is ﬁne-tuned on our human data. This result holds true even when we",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 42,
+        "pdf_label": "42",
+        "printed_page": 42,
+        "start_index": 0,
+        "chunk_id": 175,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "labeled completions, from which there were up to\n(K\n2\n)\npossible comparisons. Ties were dropped.\nTherefore, a single batch could contain up to 64 ×\n(K\n2\n)\n≤ 2,304 comparisons.\nC.3 Details of the initialization models for RLHF\nWe initialize the RLHF models from a pretrained GPT-3 model and apply supervised ﬁne-tuning for\n2 epochs on the demonstration dataset. We also mix in 10% pretraining data during ﬁne-tuning, since\nwe ﬁnd it helpful for PPO training (see Appendix E.11 for details). Cosine learning rate schedule\nis used and the learning rate eventually decays to 10% of the peak learning rate. We use a batch\nsize of 32 for 1.3B and 6B models and 8 for the 175B model. We compare a few different peak\nlearning rates for each model and pick the one with low losses on both the demonstration and the\npretraining validation datasets. A log linear sweep of 5 values of the LR’s are compared for 1.3B and",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 0,
+        "chunk_id": 85,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "the real world with customers.10 This enables an important feedback loop on the techniques’\neffectiveness and limitations.\n5.2 Who are we aligning to?\nWhen aligning language models with human intentions, their end behavior is a function of the\nunderlying model (and its training data), the ﬁne-tuning data, and the alignment method used. In this\nsection, we describe a number of factors that inﬂuence the ﬁne-tuning data speciﬁcally, to ultimately\ndetermine what and who we’re aligning to. We then consider areas for improvement before a larger\ndiscussion of the limitations of our work in Section 5.3.\nThe literature often frames alignment using such terms as “human preferences” or “human values.”\nIn this work, we have aligned to a set of labelers’ preferences that were inﬂuenced, among others\nthings, by the instructions they were given, the context in which they received them (as a paid job),\nand who they received them from. Some crucial caveats apply:",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      9,
+      175,
+      85
+    ],
+    "context_chars": 2789,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": "На стр. 42 явно указан набор демонстраций для supervised fine-tuning. Это достаточный альтернативный отрывок.",
+    "method": "BoW",
+    "kind": "exact"
+  },
+  {
+    "id": "Q05",
+    "review_key": "e4/BoW/exact/Q05",
+    "fingerprint": "9acd7b557bf20e904ef786930c797e5366c8209cb0b7c26c7d1110d23ec30a4b",
+    "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "query": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": true,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 8,
+        "pdf_label": "8",
+        "printed_page": 8,
+        "start_index": 799,
+        "chunk_id": 37,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "Despite the complexity of the task, we ﬁnd that inter-annotator agreement rates are quite high:\ntraining labelers agree with each-other 72.6 ± 1.5% of the time, while for held-out labelers this\nnumber is 77.3 ± 1.3%. For comparison, in the summarization work of Stiennon et al. (2020)\nresearcher-researcher agreement was 73 ± 4%.\n3.5 Models\nWe start with the GPT-3 pretrained language models from Brown et al. (2020). These models are\ntrained on a broad distribution of Internet data and are adaptable to a wide range of downstream tasks,\nbut have poorly characterized behavior. Starting from these models, we then train models with three\ndifferent techniques:\nSupervised ﬁne-tuning (SFT). We ﬁne-tune GPT-3 on our labeler demonstrations using supervised\nlearning. We trained for 16 epochs, using a cosine learning rate decay, and residual dropout of 0.2.\nWe do our ﬁnal SFT model selection based on the RM score on the validation set. Similarly to Wu",
+        "contains_annotated_evidence": true
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 8,
+        "pdf_label": "8",
+        "printed_page": 8,
+        "start_index": 0,
+        "chunk_id": 36,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "doing so requires making some difﬁcult design decisions that we leave to future work; see Section 5.4\nfor more discussion). However, in our ﬁnal evaluations we asked labelers prioritize truthfulness and\nharmlessness (since this is what we really care about).\nAs in Stiennon et al. (2020), we collaborate closely with labelers over the course of the project. We\nhave an onboarding process to train labelers on the project, write detailed instructions for each task\n(see Appendix B.2), and answer labeler questions in a shared chat room.\nAs an initial study to see how well our model generalizes to the preferences of other labelers, we hire\na separate set of labelers who do not produce any of the training data. These labelers are sourced\nfrom the same vendors, but do not undergo a screening test.\nDespite the complexity of the task, we ﬁnd that inter-annotator agreement rates are quite high:\ntraining labelers agree with each-other 72.6 ± 1.5% of the time, while for held-out labelers this",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 52,
+        "pdf_label": "52",
+        "printed_page": 52,
+        "start_index": 767,
+        "chunk_id": 200,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "amount of training data. We then apply ﬁve fold cross validation, by training the 6B reward model\non four groups and validating on the other group. We use the same hyperparameters as deﬁned in\nAppendix C.2. We ﬁnd that the inter- and intra-group validation accuracies for predicting the human-\npreferred output are 72.4±0.4%, and 69.6±0.9% respectively, suggesting our RMs can generalize\nwell to held-out labelers drawn from the same set as the training labelers.\nE.3 Metadata results as a function of model size\nIn Figure 30, we show metadata results as a function of model size.\n52",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      37,
+      36,
+      200
+    ],
+    "context_chars": 2526,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "exact"
+  },
+  {
+    "id": "Q06",
+    "review_key": "e4/BoW/exact/Q06",
+    "fingerprint": "7fdafa983039a95a0e0728c6ea9d11baaeb94ccbb614293970eeb26e7de37e23",
+    "question": "What do β and γ control in the PPO-ptx objective?",
+    "query": "What do β and γ control in the PPO-ptx objective?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": true,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 9,
+        "pdf_label": "9",
+        "printed_page": 9,
+        "start_index": 1504,
+        "chunk_id": 43,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "following combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRL φ\n[\nrθ(x,y) −β log\n(\nπRL φ (y|x)/πSFT(y|x) )] +\nγEx∼Dpretrain\n[\nlog(πRL φ (x)) ] (2)\nwhere πRL φ is the learned RL policy, πSFT is the supervised trained model, and Dpretrain is the\npretraining distribution. The KL reward coefﬁcient, β, and the pretraining loss coefﬁcient, γ, control\nthe strength of the KL penalty and pretraining gradients respectively. For \"PPO\" models, γ is set to 0.\nUnless otherwise speciﬁed, in this paper InstructGPT refers to the PPO-ptx models.\nBaselines. We compare the performance of our PPO models to our SFT models and GPT-3. We also\ncompare to GPT-3 when it is provided a few-shot preﬁx to ‘prompt’ it into an instruction-following\nmode (GPT-3-prompted). This preﬁx is prepended to the user-speciﬁed instruction.6\nWe additionally compare InstructGPT to ﬁne-tuning 175B GPT-3 on the FLAN (Wei et al., 2021) and",
+        "contains_annotated_evidence": true
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 51,
+        "pdf_label": "51",
+        "printed_page": 51,
+        "start_index": 805,
+        "chunk_id": 198,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "and a variety of natural language capabilities. The results of these evaluations are in Table 14. We\nshow zero-shot performance of our models in Figure 28, and few-shot performance in Figure 29. We\ncan see that the PPO model without pretraining mix has performance regressions on many datasets,\nparticularly in the few-shot setting, and that these regressions are mitigated by our PPO-ptx model.\n51",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 9,
+        "pdf_label": "9",
+        "printed_page": 9,
+        "start_index": 727,
+        "chunk_id": 42,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "Reinforcement learning (RL). Once again following Stiennon et al. (2020), we ﬁne-tuned the\nSFT model on our environment using PPO (Schulman et al., 2017). The environment is a bandit\nenvironment which presents a random customer prompt and expects a response to the prompt. Given\nthe prompt and response, it produces a reward determined by the reward model and ends the episode.\nIn addition, we add a per-token KL penalty from the SFT model at each token to mitigate over-\noptimization of the reward model. The value function is initialized from the RM. We call these\nmodels “PPO.”\nWe also experiment with mixing the pretraining gradients into the PPO gradients, in order to ﬁx the\nperformance regressions on public NLP datasets. We call these models “PPO-ptx.” We maximize the\nfollowing combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRL φ\n[\nrθ(x,y) −β log\n(\nπRL φ (y|x)/πSFT(y|x) )] +\nγEx∼Dpretrain\n[\nlog(πRL φ (x)) ] (2)",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      43,
+      198,
+      42
+    ],
+    "context_chars": 2262,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "exact"
+  },
+  {
+    "id": "Q09",
+    "review_key": "e4/BoW/exact/Q09",
+    "fingerprint": "c33e93a7c586717386d041fcc3d28a1d5e806d8ed9fe0e4b786e5e64984eb381",
+    "question": "What fraction of the InstructGPT prompt dataset was classified as English by langid.py?",
+    "query": "What fraction of the InstructGPT prompt dataset was classified as English by langid.py?",
+    "reference": "About 96%. The estimated true fraction may be 99% or higher.",
+    "evidence": [
+      {
+        "page": 35,
+        "quote": "around 96% of our dataset (110k datapoints) is classified as English"
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": true,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 35,
+        "pdf_label": "35",
+        "printed_page": 35,
+        "start_index": 0,
+        "chunk_id": 150,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "We used a lightweight classiﬁer (langid.py) to classify the language of all instructions in our\ndataset. Empirically, around 96% of our dataset (110k datapoints) is classiﬁed as English, although\nwe estimate that the actual fraction may be 99% or higher, due to classiﬁer inaccuracies.\nBesides English, a small minority of prompts were found in at least 20 other languages: Spanish,\nFrench, German, Portuguese, Italian, Dutch, Romanian, Catalan, Chinese, Japanese, Swedish, Polish,\nDanish, Turkish, Indonesian, Czech, Norwegian, Korean, Finnish, Hungarian, Hebrew, Russian,\nLithuanian, Esperanto, Slovak, Croatian, Swahili, Estonian, Slovenian, Arabic, Thai, Vietnamese,\nMalayalam, Greek, Albanian, and Tibetan.\nTable 8 shows the average number of prompts each customer contributed to the dataset. In Table 9,\nwe report descriptive statistics for prompt lengths (in tokens) used to train various models, and in",
+        "contains_annotated_evidence": true
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 65,
+        "pdf_label": "65",
+        "printed_page": 65,
+        "start_index": 3246,
+        "chunk_id": 235,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "GPT-3 175B completion:\nSerendipity is the ability to see something good in something bad. Use the word in a sentence.\nSerendipity means to be happy with what you have. Use the word in a sentence.\nSerendipity means ﬁnding something good in something that is bad. Use the word in a sentence.\nInstructGPT 175B completion:\nSerendipity can be deﬁned as the happy chance occurrence of events leading to a beneﬁcial outcome. For\nexample, when Lori ﬁrst moved to the city and started her job search, it was serendipity that she stumbled\nupon the perfect opportunity and was able to start her career in marketing with a company she truly loves.\nFigure 47: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n65",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 49,
+        "pdf_label": "49",
+        "printed_page": 49,
+        "start_index": 0,
+        "chunk_id": 194,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "WSC (Winograd Schema Challenge)\nExample prompt\nFinal Exam with Answer Key\nInstructions: Please carefully read the following passages. For each passage,\nyou must identify which noun the pronoun marked in bold refers to.\nPassage: Jane gave Joan candy because she was hungry.\nQuestion: In the passage above, what does the pronoun “she” refer to?\nAnswer: [target completion: “Joan”]\nDataset features\n• 104 binary multiple choice questions.\n• In the few-shot setting, there are 15 additional question/answer pairs.\n• Note that the task as originally constructed in the SuperGLUE is in the format of a binary\nquestion (e.g. “the pronoun she refers to Joan, True or False?”). In order to convert the sampled\nresponse into a binary answer, we check to see if the sample contains the pronoun or vice versa.\nIf so, we reply “True”, otherwise “False”.\nFigure 24: WSC: prompting, examples, and dataset features.\nWMT Fr → En 15\nExample prompt\nTranslate the following sentences from French into English.",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      150,
+      235,
+      194
+    ],
+    "context_chars": 2816,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "exact"
+  },
+  {
+    "id": "Q10",
+    "review_key": "e4/BoW/exact/Q10",
+    "fingerprint": "8d3bdd28114ea8179e255f88ec6b0f9d803f18fb52486519be8638c66311b275",
+    "question": "How many Reddit posts were used in the TL;DR summarization evaluation dataset?",
+    "query": "How many Reddit posts were used in the TL;DR summarization evaluation dataset?",
+    "reference": "2,500 Reddit posts.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "2,500 Reddit posts to summarize."
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": true,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 50,
+        "pdf_label": "50",
+        "printed_page": 50,
+        "start_index": 0,
+        "chunk_id": 196,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "TLDR Summarization\nPrompt format\n[Reddit post]\nTL;DR: [completion]\nDataset features\n• 2,500 Reddit posts to summarize.\n• In the few-shot setting, there are 15 additional French / English pairs.\n• Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries.\nFigure 27: TL;DR: prompting, examples, and dataset features.\n50",
+        "contains_annotated_evidence": true
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 49,
+        "pdf_label": "49",
+        "printed_page": 49,
+        "start_index": 798,
+        "chunk_id": 195,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "If so, we reply “True”, otherwise “False”.\nFigure 24: WSC: prompting, examples, and dataset features.\nWMT Fr → En 15\nExample prompt\nTranslate the following sentences from French into English.\nFrench: Je suis payé de manière décente, mais pas de manière extravagante.\nEnglish: [completion]\nDataset features\n• 1,500 French / English pairs.\n• In the few-shot setting, there are 15 additional French / English pairs.\n• Translations are evaluated using the BLEU metric.\nFigure 25: WMT Fr → En 15: prompting, examples, and dataset features.\nCNN/DM Summarization\nPrompt format\n[news article]\nTL;DR: [completion]\nDataset features\n• 2,354 news articles to summarize.\n• In the few-shot setting, there are 15 additional French / English pairs.\n• Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries.\nFigure 26: CNN/DM: prompting, examples, and dataset features.\n49",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 33,
+        "pdf_label": "33",
+        "printed_page": 33,
+        "start_index": 0,
+        "chunk_id": 145,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "Use Case Example\nother - I like to play Call of Duty\n- I like to play Call of Duty\n- I like to play Call of Duty\n- I like to play Call of Duty\nA.3 Dataset sizes\nIn table 6, we report the sizes of datasets used to train / validate the SFT, RM, and RL models, in\naddition to whether the prompts were written by our labeling contractors or from our API.\nTable 6: Dataset sizes, in terms of number of prompts.\nSFT Data RM Data PPO Data\nsplit source size split source size split source size\ntrain labeler 11,295 train labeler 6,623 train customer 31,144\ntrain customer 1,430 train customer 26,584 valid customer 16,185\nvalid labeler 1,550 valid labeler 3,488\nvalid customer 103 valid customer 14,399\nFor SFT, note that we have many more labeler-written prompts than customer prompts-this is\nbecause, at the start of the project, we had labelers write instructions with a user interface that asked\nthem to give an overarching template instruction as well as few-shot examples for that instruction.",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      196,
+      195,
+      145
+    ],
+    "context_chars": 2233,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "exact"
+  },
+  {
+    "id": "Q01",
+    "review_key": "e4/BoW/paraphrase/Q01",
+    "fingerprint": "56ff5f1d23e8f0987e21a7d7d0c7440f364e94945437e0827557a2edca1243a4",
+    "question": "What examples of desirable behavior did people supply for the first learning stage that created InstructGPT?",
+    "query": "What examples of desirable behavior did people supply for the first learning stage that created InstructGPT?",
+    "reference": "Demonstrations of desired behavior written by human labelers.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 1588,
+        "chunk_id": 93,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "Models. Our models are neither fully aligned nor fully safe; they still generate toxic or biased\noutputs, make up facts, and generate sexual and violent content without explicit prompting. They can\nalso fail to generate reasonable outputs on some inputs; we show some examples of this in Figure 9.\nPerhaps the greatest limitation of our models is that, in most cases, they follow the user’s instruction,\neven if that could lead to harm in the real world. For example, when given a prompt instructing the\nmodels to be maximally biased, InstructGPT generates more toxic outputs than equivalently-sized\nGPT-3 models. We discuss potential mitigations in the following sections.\n5.4 Open questions\nThis work is a ﬁrst step towards using alignment techniques to ﬁne-tune language models to follow a\nwide range of instructions. There are many open questions to explore to further align language model\nbehavior with what people actually want them to do.",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 37,
+        "pdf_label": "37",
+        "printed_page": 37,
+        "start_index": 2467,
+        "chunk_id": 160,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "• Avoid generating misleading information, or information with questionable authenticity. For example, if the input\nasks “Why did Hillary Clinton go to jail?”, the output should not say “It’s not totally clear”, but rather should\nrefute the premise of the question.\nBy harmless, we mean that the output should not cause physical, psychological, or social harm to people; damage to or loss\nof equipment or property; damage to the environment; or harm to institutions or resources necessary to human wellbeing.\nSome examples of harmless behavior:\n• Treating other humans with kindness, respect and consideration; not denigrating members of certain groups, or\nusing biased language against a particular group.\n• Not generating abusive, threatening, or offensive language, or promoting violence.\n• Not writing sexual or violent content if it’s not asked for.\n• Not giving bad real-world advice, or promoting illegal activity.",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 29,
+        "pdf_label": "29",
+        "printed_page": 29,
+        "start_index": 0,
+        "chunk_id": 137,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "Use Case Example\nchat The following is a conversation with an AI assistant. The assistant is helpful,\ncreative, clever, and very friendly.\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: I’d like to cancel my subscription.\nAI:\nchat Marv is a chatbot that reluctantly answers questions with sarcastic responses:\nYou: How many pounds are in a kilogram?\nMarv: This again? There are 2.2 pounds in a kilogram. Please make a note of\nthis.\nYou: What does HTML stand for?\nMarv: Was Google too busy? Hypertext Markup Language. The T is for try to\nask better questions in the future.\nYou: When did the ﬁrst airplane ﬂy?\nMarv:\nchat This is a conversation with an enlightened Buddha. Every response is full of\nwisdom and love.\nMe: How can I achieve greater peace and equanimity?\nBuddha:\nclosed qa Help me answer questions about the following short story:\n{story}\nWhat is the moral of the story?\nclosed qa Answer the following question:\nWhat shape is the earth?",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      93,
+      160,
+      137
+    ],
+    "context_chars": 2860,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q05",
+    "review_key": "e4/BoW/paraphrase/Q05",
+    "fingerprint": "494fcbe92904ee2d123613bcea4826b1458d0cdf43f35a782c42364168e87245",
+    "question": "How often did the independent raters agree with one another, and what margin was reported?",
+    "query": "How often did the independent raters agree with one another, and what margin was reported?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 9,
+        "pdf_label": "9",
+        "printed_page": 9,
+        "start_index": 3064,
+        "chunk_id": 45,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "6To obtain this preﬁx, authors RL and DA held a preﬁx-ﬁnding competition: each spent an hour interacting\nwith GPT-3 to come up with their two best preﬁxes. The winning preﬁx was the one that led GPT-3 to attain the\nhighest RM score on the prompt validation set. DA won.\n9",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 29,
+        "pdf_label": "29",
+        "printed_page": 29,
+        "start_index": 0,
+        "chunk_id": 137,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "Use Case Example\nchat The following is a conversation with an AI assistant. The assistant is helpful,\ncreative, clever, and very friendly.\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: I’d like to cancel my subscription.\nAI:\nchat Marv is a chatbot that reluctantly answers questions with sarcastic responses:\nYou: How many pounds are in a kilogram?\nMarv: This again? There are 2.2 pounds in a kilogram. Please make a note of\nthis.\nYou: What does HTML stand for?\nMarv: Was Google too busy? Hypertext Markup Language. The T is for try to\nask better questions in the future.\nYou: When did the ﬁrst airplane ﬂy?\nMarv:\nchat This is a conversation with an enlightened Buddha. Every response is full of\nwisdom and love.\nMe: How can I achieve greater peace and equanimity?\nBuddha:\nclosed qa Help me answer questions about the following short story:\n{story}\nWhat is the moral of the story?\nclosed qa Answer the following question:\nWhat shape is the earth?",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      45,
+      187,
+      137
+    ],
+    "context_chars": 1402,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q06",
+    "review_key": "e4/BoW/paraphrase/Q06",
+    "fingerprint": "9307712bf4fa94382ecc28a7cfba9705c3e7591beb8a348344dc930673c6844d",
+    "question": "In the method that continues to learn from the initial text corpus during policy improvement, what does each of the two weighting factors adjust?",
+    "query": "In the method that continues to learn from the initial text corpus during policy improvement, what does each of the two weighting factors adjust?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 42,
+        "pdf_label": "42",
+        "printed_page": 42,
+        "start_index": 2388,
+        "chunk_id": 178,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "learning rate of 9e-6 for the value function is used for 1.3B and the 6B policies and 5e-6 for the 175B\npolicy.\nOur initial RLHF experiments showed regressions on public NLP datasets, such as SQuADv2 and\nDROP, and we mitigate the regressions by mixing in pretraining gradients during PPO training. We\nuse 8 times more pretraining examples than the number of the RL training episodes. The pretraining\ndata is randomly drawn from the dataset used to train the GPT-3 models. For each minibatch, we\ncompute the PPO gradients and pretraining gradients in consecutive steps and accumulate them\nboth into the gradient buffers. We multiply the pretraining gradients by a coefﬁcient, γ = 27.8 (see\nEquation 2), to control the relative strength of gradients from PPO and pretraining distributions.\nC.5 FLAN and T0 models\nWe obtain our FLAN and T0 baselines by ﬁne-tuning a 175B GPT-3 model on the FLAN and T0\ndatasets. For T0, note that we trained on the T0++ version of the dataset. Because T0 contains much",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 0,
+        "chunk_id": 85,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "the real world with customers.10 This enables an important feedback loop on the techniques’\neffectiveness and limitations.\n5.2 Who are we aligning to?\nWhen aligning language models with human intentions, their end behavior is a function of the\nunderlying model (and its training data), the ﬁne-tuning data, and the alignment method used. In this\nsection, we describe a number of factors that inﬂuence the ﬁne-tuning data speciﬁcally, to ultimately\ndetermine what and who we’re aligning to. We then consider areas for improvement before a larger\ndiscussion of the limitations of our work in Section 5.3.\nThe literature often frames alignment using such terms as “human preferences” or “human values.”\nIn this work, we have aligned to a set of labelers’ preferences that were inﬂuenced, among others\nthings, by the instructions they were given, the context in which they received them (as a paid job),\nand who they received them from. Some crucial caveats apply:",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 49,
+        "pdf_label": "49",
+        "printed_page": 49,
+        "start_index": 0,
+        "chunk_id": 194,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "WSC (Winograd Schema Challenge)\nExample prompt\nFinal Exam with Answer Key\nInstructions: Please carefully read the following passages. For each passage,\nyou must identify which noun the pronoun marked in bold refers to.\nPassage: Jane gave Joan candy because she was hungry.\nQuestion: In the passage above, what does the pronoun “she” refer to?\nAnswer: [target completion: “Joan”]\nDataset features\n• 104 binary multiple choice questions.\n• In the few-shot setting, there are 15 additional question/answer pairs.\n• Note that the task as originally constructed in the SuperGLUE is in the format of a binary\nquestion (e.g. “the pronoun she refers to Joan, True or False?”). In order to convert the sampled\nresponse into a binary answer, we check to see if the sample contains the pronoun or vice versa.\nIf so, we reply “True”, otherwise “False”.\nFigure 24: WSC: prompting, examples, and dataset features.\nWMT Fr → En 15\nExample prompt\nTranslate the following sentences from French into English.",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      178,
+      85,
+      194
+    ],
+    "context_chars": 2947,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q09",
+    "review_key": "e4/BoW/paraphrase/Q09",
+    "fingerprint": "f4aa45f38a5a0811a9d2c4771ff82e0d19e0f12c6671dc028a8dd747366d5602",
+    "question": "What share of the inputs for this instruction-following project did the language detector identify as being written in English?",
+    "query": "What share of the inputs for this instruction-following project did the language detector identify as being written in English?",
+    "reference": "About 96%. The estimated true fraction may be 99% or higher.",
+    "evidence": [
+      {
+        "page": 35,
+        "quote": "around 96% of our dataset (110k datapoints) is classified as English"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 62,
+        "pdf_label": "62",
+        "printed_page": 62,
+        "start_index": 1582,
+        "chunk_id": 222,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "Figure 42: Model samples on a prompt cherry-picked to show instruction following behavior in other\nlanguages, along with random samples from the GPT-3 175B and InstructGPT 175B models. This is\nthe same French example as the top of Figure 8, but contains the full InstructGPT sample.\n62",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 36,
+        "pdf_label": "36",
+        "printed_page": 36,
+        "start_index": 1548,
+        "chunk_id": 154,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "labeler.\n4. Self-assessed ability to identify sensitive speech for different groups. We wanted to\nselect a team of labelers that had collectively were able to identify sensitive content in a\nbroad range of areas. For legal reasons, we can’t hire contractors based on demographic\ncriteria. Thus, we had labelers answer the question: “For what topics or cultural groups\nare you comfortable identifying sensitive speech?” and used this as part of our selection\nprocess.\nAfter collecting this data, we selected the labelers who did well on all of these criteria (we performed\nselections on an anonymized version of the data). Since the fourth criteria is subjective, we ultimately\nchose labelers subjectively according to these criteria, though we had soft cutoffs at 75% agreement\non sensitive speech ﬂagging and comparisons, and a 6/7 demonstration score.\nB.2 Labeling instructions\nThe instructions we provided to labelers evolved over the course of the project, as we provided",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 1588,
+        "chunk_id": 93,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "Models. Our models are neither fully aligned nor fully safe; they still generate toxic or biased\noutputs, make up facts, and generate sexual and violent content without explicit prompting. They can\nalso fail to generate reasonable outputs on some inputs; we show some examples of this in Figure 9.\nPerhaps the greatest limitation of our models is that, in most cases, they follow the user’s instruction,\neven if that could lead to harm in the real world. For example, when given a prompt instructing the\nmodels to be maximally biased, InstructGPT generates more toxic outputs than equivalently-sized\nGPT-3 models. We discuss potential mitigations in the following sections.\n5.4 Open questions\nThis work is a ﬁrst step towards using alignment techniques to ﬁne-tune language models to follow a\nwide range of instructions. There are many open questions to explore to further align language model\nbehavior with what people actually want them to do.",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      222,
+      154,
+      93
+    ],
+    "context_chars": 2205,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q10",
+    "review_key": "e4/BoW/paraphrase/Q10",
+    "fingerprint": "f8a713be5a9d1fe7b19c7169417b4c2c4689fc3575248642bd8af95929a46886",
+    "question": "How many forum entries were there in the test of the model's ability to condense long messages?",
+    "query": "How many forum entries were there in the test of the model's ability to condense long messages?",
+    "reference": "2,500 Reddit posts.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "2,500 Reddit posts to summarize."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 2227,
+        "chunk_id": 88,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "and their end users may disagree or customers may not be optimizing for end users’ well-being; for\nexample, a customer may want a model that maximizes the amount of time a user spends on their\nplatform, which is not necessarily what end-users want. In practice, our labelers don’t have visibility\ninto the contexts in which a given prompt or completion will be seen.\nFourth, OpenAI’s customers are not representative of all potential or current users of language\nmodels-let alone of all individuals and groups impacted by language model use. For most of the\nduration of this project, users of the OpenAI API were selected off of a waitlist. The initial seeds for\nthis waitlist were OpenAI employees, biasing the ultimate group toward our own networks.\nStepping back, there are many difﬁculties in designing an alignment process that is fair, transparent,\nand has suitable accountability mechanisms in place. The goal of this paper is to demonstrate that",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 17,
+        "pdf_label": "17",
+        "printed_page": 17,
+        "start_index": 3225,
+        "chunk_id": 83,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "code-related tasks. This is an important property because it’s prohibitively expensive to have\nhumans supervise models on every task they perform. More research is needed to study how\nwell this generalization scales with increased capabilities; see Christiano et al. (2021) for\nrecent research in this direction.\n3. We were able to mitigate most of the performance degradations introduced by our\nﬁne-tuning. If this was not the case, these performance degradations would constitute\nan alignment tax-an additional cost for aligning the model. Any technique with a high\ntax might not see adoption. To avoid incentives for future highly capable AI systems to\nremain unaligned with human intent, there is a need for alignment techniques that have low\nalignment tax. To this end, our results are good news for RLHF as a low-tax alignment\ntechnique.\n4. We’ve validated alignment techniques from research in the real world. Alignment",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 2,
+        "pdf_label": "2",
+        "printed_page": 2,
+        "start_index": 3102,
+        "chunk_id": 8,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      88,
+      83,
+      8
+    ],
+    "context_chars": 2445,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "BoW",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q01",
+    "review_key": "e4/OllamaEmbeddings/exact/Q01",
+    "fingerprint": "7d730b582c1edcc15f3461b414b45722b5714701eac9460f1f3a85fd57347903",
+    "question": "What data were used for supervised fine-tuning in InstructGPT?",
+    "query": "What data were used for supervised fine-tuning in InstructGPT?",
+    "reference": "Demonstrations of desired behavior written by human labelers.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "exact"
+  },
+  {
+    "id": "Q05",
+    "review_key": "e4/OllamaEmbeddings/exact/Q05",
+    "fingerprint": "251caeda4fd90606be14b96bb853d36af151d3d4f0db703a5809a3dec5d91f12",
+    "question": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "query": "What was the inter-annotator agreement for held-out labelers, including uncertainty?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      240,
+      246
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        240,
+        246,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "exact"
+  },
+  {
+    "id": "Q06",
+    "review_key": "e4/OllamaEmbeddings/exact/Q06",
+    "fingerprint": "7d730b582c1edcc15f3461b414b45722b5714701eac9460f1f3a85fd57347903",
+    "question": "What do β and γ control in the PPO-ptx objective?",
+    "query": "What do β and γ control in the PPO-ptx objective?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "exact"
+  },
+  {
+    "id": "Q09",
+    "review_key": "e4/OllamaEmbeddings/exact/Q09",
+    "fingerprint": "7d730b582c1edcc15f3461b414b45722b5714701eac9460f1f3a85fd57347903",
+    "question": "What fraction of the InstructGPT prompt dataset was classified as English by langid.py?",
+    "query": "What fraction of the InstructGPT prompt dataset was classified as English by langid.py?",
+    "reference": "About 96%. The estimated true fraction may be 99% or higher.",
+    "evidence": [
+      {
+        "page": 35,
+        "quote": "around 96% of our dataset (110k datapoints) is classified as English"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      240
+    ],
+    "context_chars": 728,
+    "near_duplicate_pairs": [
+      [
+        246,
+        240,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "exact"
+  },
+  {
+    "id": "Q10",
+    "review_key": "e4/OllamaEmbeddings/exact/Q10",
+    "fingerprint": "76d8ec45e774e618888a15dd25cdb356bf6c3e33310a71a04602d079c444b413",
+    "question": "How many Reddit posts were used in the TL;DR summarization evaluation dataset?",
+    "query": "How many Reddit posts were used in the TL;DR summarization evaluation dataset?",
+    "reference": "2,500 Reddit posts.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "2,500 Reddit posts to summarize."
+      }
+    ],
+    "hit_at_3": true,
+    "hit_annotated_passage": true,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 50,
+        "pdf_label": "50",
+        "printed_page": 50,
+        "start_index": 0,
+        "chunk_id": 196,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "TLDR Summarization\nPrompt format\n[Reddit post]\nTL;DR: [completion]\nDataset features\n• 2,500 Reddit posts to summarize.\n• In the few-shot setting, there are 15 additional French / English pairs.\n• Summaries are judged via their ROUGE-L scores with respect to a set of reference summaries.\nFigure 27: TL;DR: prompting, examples, and dataset features.\n50",
+        "contains_annotated_evidence": true
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      196,
+      240
+    ],
+    "context_chars": 791,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "exact"
+  },
+  {
+    "id": "Q01",
+    "review_key": "e4/OllamaEmbeddings/paraphrase/Q01",
+    "fingerprint": "8f27213542c3c1913116cd4ff855fb7836406f7e830ecfdc60b8f9e8ea8323d6",
+    "question": "What examples of desirable behavior did people supply for the first learning stage that created InstructGPT?",
+    "query": "What examples of desirable behavior did people supply for the first learning stage that created InstructGPT?",
+    "reference": "Demonstrations of desired behavior written by human labelers.",
+    "evidence": [
+      {
+        "page": 1,
+        "quote": "labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 39,
+        "pdf_label": "39",
+        "printed_page": 39,
+        "start_index": 0,
+        "chunk_id": 168,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "(a)\n(b)\nFigure 12: Screenshots of our labeling interface. (a) For each output, labelers give a Likert score for\noverall quality on a 1-7 scale, and also provide various metadata labels. (b) After evaluating each\noutput individually, labelers rank all the outputs for a given prompt. Ties are encouraged in cases\nwhere two outputs seem to be of similar quality.\n39",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      246,
+      168
+    ],
+    "context_chars": 788,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q05",
+    "review_key": "e4/OllamaEmbeddings/paraphrase/Q05",
+    "fingerprint": "d95f71241406d7b5c665a79e8d59bf1cdc731deb0bbe71d4103289c772638f50",
+    "question": "How often did the independent raters agree with one another, and what margin was reported?",
+    "query": "How often did the independent raters agree with one another, and what margin was reported?",
+    "reference": "77.3 ± 1.3%.",
+    "evidence": [
+      {
+        "page": 8,
+        "quote": "for held-out labelers this number is 77.3 ± 1.3%."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 20,
+        "pdf_label": "20",
+        "printed_page": 20,
+        "start_index": 4075,
+        "chunk_id": 102,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "and increased centralization of power because it requires the API provider to make decisions on\nwhere to draw the line on each of these questions.\nFinally, as discussed in Section 5.2, the question of who these models are aligned to is extremely\nimportant, and will signiﬁcantly affect whether the net impact of these models is positive or negative.\n20",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      187,
+      102,
+      240
+    ],
+    "context_chars": 792,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q06",
+    "review_key": "e4/OllamaEmbeddings/paraphrase/Q06",
+    "fingerprint": "6303f84339f44ed008f58975a262ce41ec6a41926ac98d6bd37c3b2db73d80cc",
+    "question": "In the method that continues to learn from the initial text corpus during policy improvement, what does each of the two weighting factors adjust?",
+    "query": "In the method that continues to learn from the initial text corpus during policy improvement, what does each of the two weighting factors adjust?",
+    "reference": "β controls the KL penalty; γ controls the pretraining gradients.",
+    "evidence": [
+      {
+        "page": 9,
+        "quote": "The KL reward coefficient, β, and the pretraining loss coefficient, γ, control the strength of the KL penalty and pretraining gradients respectively."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 4062,
+        "chunk_id": 96,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "sampling procedure at inference time using a smaller model (Dathathri et al., 2019).\nWhile we mainly focus on RLHF, there are many other algorithms that could be used to train policies\non our demonstration and comparison data to get even better results. For example, one could explore\nexpert iteration (Anthony et al., 2017; Silver et al., 2017), or simpler behavior cloning methods that\nuse a subset of the comparison data. One could also try constrained optimization approaches (Achiam\net al., 2017) that maximize the score from a reward model conditioned on generating a small number\nof harmful behaviors.\n19",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 45,
+        "pdf_label": "45",
+        "printed_page": 45,
+        "start_index": 1712,
+        "chunk_id": 187,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 18,
+        "pdf_label": "18",
+        "printed_page": 18,
+        "start_index": 0,
+        "chunk_id": 85,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "the real world with customers.10 This enables an important feedback loop on the techniques’\neffectiveness and limitations.\n5.2 Who are we aligning to?\nWhen aligning language models with human intentions, their end behavior is a function of the\nunderlying model (and its training data), the ﬁne-tuning data, and the alignment method used. In this\nsection, we describe a number of factors that inﬂuence the ﬁne-tuning data speciﬁcally, to ultimately\ndetermine what and who we’re aligning to. We then consider areas for improvement before a larger\ndiscussion of the limitations of our work in Section 5.3.\nThe literature often frames alignment using such terms as “human preferences” or “human values.”\nIn this work, we have aligned to a set of labelers’ preferences that were inﬂuenced, among others\nthings, by the instructions they were given, the context in which they received them (as a paid job),\nand who they received them from. Some crucial caveats apply:",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      96,
+      187,
+      85
+    ],
+    "context_chars": 1708,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q09",
+    "review_key": "e4/OllamaEmbeddings/paraphrase/Q09",
+    "fingerprint": "7b9ba7d3f49cb9c60ed375a091817e487c43fcfa6b136860a511adeb4eab3d73",
+    "question": "What share of the inputs for this instruction-following project did the language detector identify as being written in English?",
+    "query": "What share of the inputs for this instruction-following project did the language detector identify as being written in English?",
+    "reference": "About 96%. The estimated true fraction may be 99% or higher.",
+    "evidence": [
+      {
+        "page": 35,
+        "quote": "around 96% of our dataset (110k datapoints) is classified as English"
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 66,
+        "pdf_label": "66",
+        "printed_page": 66,
+        "start_index": 3185,
+        "chunk_id": 240,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 68,
+        "pdf_label": "68",
+        "printed_page": 68,
+        "start_index": 2491,
+        "chunk_id": 246,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 19,
+        "pdf_label": "19",
+        "printed_page": 19,
+        "start_index": 0,
+        "chunk_id": 91,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "5.3 Limitations\nMethodology. The behavior of our InstructGPT models is determined in part by the human feedback\nobtained from our contractors. Some of the labeling tasks rely on value judgments that may be\nimpacted by the identity of our contractors, their beliefs, cultural backgrounds, and personal history.\nWe hired about 40 contractors, guided by their performance on a screening test meant to judge how\nwell they could identify and respond to sensitive prompts, and their agreement rate with researchers\non a labeling task with detailed instructions (see Appendix B). We kept our team of contractors small\nbecause this facilitates high-bandwidth communication with a smaller set of contractors who are\ndoing the task full-time. However, this group is clearly not representative of the full spectrum of\npeople who will use and be affected by our deployed models. As a simple example, our labelers are\nprimarily English-speaking and our data consists almost entirely of English instructions.",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      240,
+      246,
+      91
+    ],
+    "context_chars": 1585,
+    "near_duplicate_pairs": [
+      [
+        240,
+        246,
+        0.796
+      ]
+    ],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "paraphrase"
+  },
+  {
+    "id": "Q10",
+    "review_key": "e4/OllamaEmbeddings/paraphrase/Q10",
+    "fingerprint": "77c6a50f63565d6f9ebb3f23b6efa4b061e704216a6b1369b23ae3ac5d1d7c92",
+    "question": "How many forum entries were there in the test of the model's ability to condense long messages?",
+    "query": "How many forum entries were there in the test of the model's ability to condense long messages?",
+    "reference": "2,500 Reddit posts.",
+    "evidence": [
+      {
+        "page": 50,
+        "quote": "2,500 Reddit posts to summarize."
+      }
+    ],
+    "hit_at_3": false,
+    "hit_annotated_passage": false,
+    "fragments": [
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 20,
+        "pdf_label": "20",
+        "printed_page": 20,
+        "start_index": 4075,
+        "chunk_id": 102,
+        "index_config": "1000/200",
+        "rank": 1,
+        "text": "and increased centralization of power because it requires the API provider to make decisions on\nwhere to draw the line on each of these questions.\nFinally, as discussed in Section 5.2, the question of who these models are aligned to is extremely\nimportant, and will signiﬁcantly affect whether the net impact of these models is positive or negative.\n20",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 16,
+        "pdf_label": "16",
+        "printed_page": 16,
+        "start_index": 3787,
+        "chunk_id": 78,
+        "index_config": "1000/200",
+        "rank": 2,
+        "text": "tasks. To give a few examples: (1) when given an instruction with a false premise, the model\nsometimes incorrectly assumes the premise is true, (2) the model can overly hedge; when given a\nsimple question, it can sometimes say that there is no one answer to the question and give multiple\npossible answers, even when there is one fairly clear answer from the context, and (3) the model’s\nperformance degrades when instructions contain multiple explicit constraints (e.g. “list 10 movies\nmade in the 1930’s set in France”) or when constraints can be challenging for language models (e.g.\nwriting a summary in a speciﬁed number of sentences).\n9We generally instruct our labelers to skip evaluations where they are missing the required expertise, though\nsometimes labelers use a translation service to evaluate simple instructions in languages that they do not speak.\n16",
+        "contains_annotated_evidence": false
+      },
+      {
+        "source_name": "LLM instruct (2).pdf",
+        "page_number": 63,
+        "pdf_label": "63",
+        "printed_page": 63,
+        "start_index": 3094,
+        "chunk_id": 227,
+        "index_config": "1000/200",
+        "rank": 3,
+        "text": "any alarms or alerts and to stay one step ahead of\npotential store employees or security personnel.\nFigure 44: Model samples on a prompt cherry-picked to show instruction following on potentially\nharmful prompts, along with random samples from the GPT-3 175B and InstructGPT 175B models.\n63",
+        "contains_annotated_evidence": false
+      }
+    ],
+    "top3_ids": [
+      102,
+      78,
+      227
+    ],
+    "context_chars": 1509,
+    "near_duplicate_pairs": [],
+    "answer": null,
+    "score_0_2": null,
+    "answer_without_evidence": null,
+    "review_note": null,
+    "method": "OllamaEmbeddings",
+    "kind": "paraphrase"
+  }
+]

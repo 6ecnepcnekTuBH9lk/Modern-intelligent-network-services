@@ -1,0 +1,3 @@
+﻿variant,chunks,early_hits,late_hits,questions,hits,hit_rate_at_3_pct,mean_score,assessed
+first_5,5,3,0,6,3,50.0,0.0,6
+full,246,0,1,6,1,16.666666666666668,0.0,6

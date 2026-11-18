@@ -13,3 +13,9 @@ lab2/agro_scoring.db-shm
 lab2/agro_scoring.db-wal
 
 lab2/checks/
+
+lab3/.venv/
+lab3/.ollama-runtime/
+lab3/.ipynb_checkpoints/
+lab3/__pycache__/
+lab3/.pytest_cache/

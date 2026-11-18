@@ -1,0 +1,73 @@
+[
+  {
+    "id": "N01",
+    "question": "What SHA-256 checksum does the paper give for the trained 6B reward-model checkpoint?",
+    "reviewed_pages": 68,
+    "term_pages": {
+      "sha-256": [],
+      "sha256": [],
+      "checksum": [],
+      "checkpoint": [
+        9,
+        42,
+        43,
+        58
+      ]
+    },
+    "conclusion": "Методы и приложение C описывают модель и выбор checkpoint, без контрольной суммы."
+  },
+  {
+    "id": "N02",
+    "question": "What exact CUDA driver patch version was used during InstructGPT training?",
+    "reviewed_pages": 68,
+    "term_pages": {
+      "cuda": [],
+      "driver version": [],
+      "gpu": [
+        60
+      ]
+    },
+    "conclusion": "В тексте и приложении C есть параметры обучения, но версия драйвера не указана."
+  },
+  {
+    "id": "N03",
+    "question": "What was the p95 serving latency in milliseconds for the 1.3B InstructGPT on the API?",
+    "reviewed_pages": 68,
+    "term_pages": {
+      "p95": [],
+      "95th percentile": [],
+      "latency": [],
+      "milliseconds": []
+    },
+    "conclusion": "Результаты API-оценки описывают предпочтения, а не задержку API."
+  },
+  {
+    "id": "N04",
+    "question": "What was the hourly carbon footprint in kg CO2e of PPO training?",
+    "reviewed_pages": 68,
+    "term_pages": {
+      "carbon": [],
+      "co2e": [],
+      "emissions": [],
+      "petaflops": [
+        17
+      ]
+    },
+    "conclusion": "Вычислительная стоимость обсуждается без почасовых выбросов CO2e."
+  },
+  {
+    "id": "N05",
+    "question": "What is the median waiting time in seconds between successive ranking tasks for an annotator?",
+    "reviewed_pages": 68,
+    "term_pages": {
+      "waiting time": [],
+      "median wait": [],
+      "seconds": [],
+      "labeler satisfaction": [
+        38,
+        41
+      ]
+    },
+    "conclusion": "В приложении B есть процесс отбора и опрос разметчиков, но нет медианного интервала между заданиями."
+  }
+]

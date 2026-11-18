@@ -1,0 +1,19 @@
+{
+  "runs": 2,
+  "separate_clean_kernels": true,
+  "same_ranked_fragments_and_answers_by_experiment": {
+    "01_coverage_details": 12,
+    "02_size_details": 60,
+    "03_overlap_details": 15,
+    "04_search_details": 20,
+    "05_citations_details": 5,
+    "06_prompts_comparison_details": 20,
+    "07_dialogue_details": 9
+  },
+  "matched_experiment_rows": 141,
+  "baseline_matches": true,
+  "summary_tables_match": true,
+  "indexes_match": true,
+  "memory_checks_match": true,
+  "repeat_without_errors": true
+}

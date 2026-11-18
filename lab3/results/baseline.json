@@ -1,0 +1,71 @@
+{
+  "id": "D01",
+  "review_key": "base/D01",
+  "fingerprint": "d53f7f51aef0a31c5f9e4bf677bb47e2e9adbe09bb9d80d1749d56854f5a63b7",
+  "question": "What is InstructGPT and how was it produced?",
+  "query": "What is InstructGPT and how was it produced?",
+  "reference": "A family of GPT-3 models fine-tuned using supervised demonstrations and RL from human feedback.",
+  "evidence": [
+    {
+      "page": 1,
+      "quote": "fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback. We call the resulting models InstructGPT."
+    }
+  ],
+  "hit_at_3": false,
+  "hit_annotated_passage": false,
+  "fragments": [
+    {
+      "source_name": "LLM instruct (2).pdf",
+      "page_number": 45,
+      "pdf_label": "45",
+      "printed_page": 45,
+      "start_index": 1712,
+      "chunk_id": 187,
+      "index_config": "1000/200",
+      "rank": 1,
+      "text": "• Completion toxicity is measured with the Perspective API.\nFigure 16: RealToxicityPrompts: prompting, examples, and dataset features.\n45",
+      "contains_annotated_evidence": false
+    },
+    {
+      "source_name": "LLM instruct (2).pdf",
+      "page_number": 68,
+      "pdf_label": "68",
+      "printed_page": 68,
+      "start_index": 2491,
+      "chunk_id": 246,
+      "index_config": "1000/200",
+      "rank": 2,
+      "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68",
+      "contains_annotated_evidence": false
+    },
+    {
+      "source_name": "LLM instruct (2).pdf",
+      "page_number": 66,
+      "pdf_label": "66",
+      "printed_page": 66,
+      "start_index": 3185,
+      "chunk_id": 240,
+      "index_config": "1000/200",
+      "rank": 3,
+      "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66",
+      "contains_annotated_evidence": false
+    }
+  ],
+  "top3_ids": [
+    187,
+    246,
+    240
+  ],
+  "context_chars": 728,
+  "near_duplicate_pairs": [
+    [
+      246,
+      240,
+      0.796
+    ]
+  ],
+  "answer": "InstructGPT - это тип AI-разработки, которая позволяет создавать и обучать модели на основе предоставленной информации. Production of InstructGPT was done by Meta AI.",
+  "score_0_2": 0,
+  "answer_without_evidence": null,
+  "review_note": "Нужное описание не извлечено. Ответ добавляет утверждение, которого нет в контексте."
+}

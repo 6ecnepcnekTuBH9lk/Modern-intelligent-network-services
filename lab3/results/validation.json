@@ -1,0 +1,18 @@
+{
+  "code_cells": 12,
+  "executed_without_errors": true,
+  "verified_indexes": 9,
+  "experiment_rows": {
+    "01_coverage": 12,
+    "02_size": 60,
+    "03_overlap": 15,
+    "04_search": 20,
+    "05_citations": 5,
+    "06_prompts_comparison": 20,
+    "07_dialogue": 9
+  },
+  "hit_rate_reconciled": true,
+  "session_isolation": true,
+  "review_annotations_validated": true,
+  "source_text_style_checked": true
+}
